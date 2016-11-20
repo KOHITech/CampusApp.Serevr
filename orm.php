@@ -19,6 +19,7 @@
 
 	interface iQueryBuilder {
 		public function connect();
+		public function close();
 		public function select($tablename, $columns, $column = null, $value = null);
 		public function create($tablename, $columns, $row);
 		public function delete($tablename, $column, $value);
@@ -90,6 +91,64 @@
 				array_push($tmp, $row->geta());
 			}
 			return json_encode($tmp);
+		}
+	}
+
+	class MySQLLinker implements iQueryBuilder {
+		var $host;
+		var $user;
+		var $pass;
+		var $connection;
+
+		function __construct($host, $user, $pass, $database) {
+			$this->$host = $host;
+			$this->$user = $user;
+			$this->$pass = $pass;
+			$this->$database = $database;
+		}
+
+		public function connect() {
+			$this->$connection = mysql_connect($host, $user, $pass);
+			if(! $connection ) {
+				die('Could not connect: ' . mysql_error());
+			}
+			mysql_select_db( $database );
+		}
+
+		public function close() {
+			mysql_close($this->$connection);
+		}
+
+		public function select($tablename, $columns, $column = null, $value = null) {
+			$sql = "SELECT %s FROM %s";
+			$where_clause = "WHERE %s = %s";
+
+			if ($column && $value) {
+				$where_clause = sprintf($where_clause, $column, $value);
+				$sql =  $sql . " " . $where_clause;
+			}
+
+			for ($i=0; $i < count($columns); $i++) { 
+				$columns[$i] = "`" . $columns[$i] . "`";
+			}
+
+			$tmp_str = join(", ", $columns);
+			$sql = sprintf($sql, $tmp_str, $tablename);
+
+			$retval = mysql_query( $sql, $this->$connection );
+
+			$table = new Table($tablename);
+
+			while($row = mysql_fetch_array($retval, MYSQL_ASSOC)) {
+				$row_class = new Row($columns);
+				foreach ($row as $key => $value) {
+					$row_class->set($key, $value);
+				}
+				$table->add_row($row_class);
+			}
+
+			return $table;
+
 		}
 	}
 	
