@@ -21,7 +21,7 @@
 		public function connect();
 		public function close();
 		public function select($tablename, $columns, $column = null, $value = null);
-		public function create($tablename, $columns, $row);
+		public function create($tablename, $row);
 		public function delete($tablename, $column, $value);
 		public function update($tablename, $columns, $row, $column, $value);
 	}
@@ -108,11 +108,11 @@
 		}
 
 		public function connect() {
-			$this->$connection = mysql_connect($host, $user, $pass);
-			if(! $connection ) {
+			$this->$connection = mysql_connect($this->$host, $this->$user, $this->$pass);
+			if(! $this->$connection ) {
 				die('Could not connect: ' . mysql_error());
 			}
-			mysql_select_db( $database );
+			mysql_select_db( $this->$database );
 		}
 
 		public function close() {
@@ -120,6 +120,8 @@
 		}
 
 		public function select($tablename, $columns, $column = null, $value = null) {
+			$this->connect();
+
 			$sql = "SELECT %s FROM %s";
 			$where_clause = "WHERE %s = %s";
 
@@ -137,6 +139,10 @@
 
 			$retval = mysql_query( $sql, $this->$connection );
 
+			if(! $retval ) {
+				die('Could not get data: ' . mysql_error());
+			}
+
 			$table = new Table($tablename);
 
 			while($row = mysql_fetch_array($retval, MYSQL_ASSOC)) {
@@ -147,8 +153,35 @@
 				$table->add_row($row_class);
 			}
 
-			return $table;
+			$this->close();
 
+			return $table;
+		}
+
+		public function create($tablename, $row) {
+			$this->connect();
+
+			$sql = "INSERT INTO %s (%s) VALUES (%s)";
+			$sql = sprintf($sql, $tablename);
+
+			$columns = array_keys($row->geta());
+			for ($i=0; $i < count($columns); $i++) { 
+				$columns[$i] = "`" . $columns[$i] . "`";
+			}
+
+			$tmp_str = join(", ", $columns);
+			$sql = sprintf($sql, $tmp_str);
+
+			$tmp_str = join(", ", array_values($row->geta()));
+			$sql = sprintf($sql, $tmp_str);
+
+			$retval = mysql_query( $sql, $this->$connection );
+
+			if(! $retval ) {
+				die('Could not insert data: ' . mysql_error());
+			}
+
+			$this->close();
 		}
 	}
 	
