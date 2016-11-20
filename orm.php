@@ -123,7 +123,7 @@
 			$this->connect();
 
 			$sql = "SELECT %s FROM %s";
-			$where_clause = "WHERE %s = %s";
+			$where_clause = "WHERE `%s` = %s";
 
 			if ($column && $value) {
 				$where_clause = sprintf($where_clause, $column, $value);
@@ -153,6 +153,8 @@
 				$table->add_row($row_class);
 			}
 
+			mysql_free_result($retval);
+
 			$this->close();
 
 			return $table;
@@ -179,6 +181,21 @@
 
 			if(! $retval ) {
 				die('Could not insert data: ' . mysql_error());
+			}
+
+			$this->close();
+		}
+
+		public function delete($tablename, $column, $value) {
+			$this->connect();
+
+			$sql = "DELETE FROM %s WHERE `%s` = %s";
+			$sql = sprintf($sql, $tablename, $column, $value);
+
+			$retval = mysql_query( $sql, $this->$connection );
+
+			if(! $retval ) {
+				die('Could not delete data: ' . mysql_error());
 			}
 
 			$this->close();
