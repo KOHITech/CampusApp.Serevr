@@ -200,6 +200,29 @@
 
 			$this->close();
 		}
+
+		public function update($tablename, $columns, $row, $column, $value) {
+			$this->connect();
+
+			$sql = "UPDATE %s SET %s WHERE `%s` = %s";
+			$sql = sprintf($sql, $tablename);
+
+			$tmp_str = [];
+			foreach ($columns as $column) {
+				array_push($tmp_str, "`$column` = " . $row[$column]);
+			}
+
+			$tmp_str = join(", ", $tmp_str);
+			$sql = sprintf($sql, $tmp_str, $column, $value);
+
+			$retval = mysql_query( $sql, $this->$connection );
+
+			if(! $retval ) {
+				die('Could not update data: ' . mysql_error());
+			}
+
+			$this->close();
+		}
 	}
 	
 ?>
