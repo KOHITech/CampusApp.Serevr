@@ -23,7 +23,7 @@ mysqli_close($bdd);
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="img/campusapp.ico">
 
     <title>ECC Dashboard</title>
 
