@@ -98,6 +98,7 @@
 		var $host;
 		var $user;
 		var $pass;
+		var $database;
 		var $connection;
 
 		function __construct($host, $user, $pass, $database) {
