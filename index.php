@@ -1,13 +1,35 @@
+
+<?php 
+mysqli_connect("localhost","root","",'kohi_db');
+
+if($bdd = mysqli_connect('localhost', 'root', '', 'kohi_db'))
+{
+  // Si la connexion a réussi, rien ne se passe.
+}
+else // Mais si elle rate…
+{
+  echo 'Erreur connexion BD'; // On affiche un message d'erreur.
+}
+
+mysqli_close($bdd);
+?>
+
 <!DOCTYPE html>
 <html>
  <head>
-  <title>Add emploi du temps</title>
-  <script src="jquery-3.1.1.min"></script>
-  <script type="text/javascript">
-    function salah2 () {
-      $("#salah").css("color", "red");
-    }
-  </script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
+    <title>ECC Dashboard</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
  </head>
  <body>
 <form method="post" action="">
@@ -465,20 +487,8 @@
 
 </form>
 
-<?php 
-mysqli_connect("localhost","root","",'kohi_db');
-
-if($bdd = mysqli_connect('localhost', 'root', '', 'kohi_db'))
-{
-  // Si la connexion a réussi, rien ne se passe.
-}
-else // Mais si elle rate…
-{
-  echo 'Erreur connexion BD'; // On affiche un message d'erreur.
-}
-
-mysqli_close($bdd);
-?>
+<script src="js/jquery-3.1.1.min"></script>
+<script src="js/main.js"></script>
 
 
  </body>
