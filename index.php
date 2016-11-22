@@ -35,18 +35,24 @@ mysqli_close($bdd);
 <form method="post" action="">
   <div>
   Voir l'emploi du temps pour : <br>
-    <select name="annee" onchange="salah2()">
-      <option value="1" >Elève 1ère année</option>
-      <option value="2" selected>Elève 2ème année</option>
-      <option value="3">Elève 3ème année</option>
+    <select name="annee" id="annee">
+      <option value="" >-- Année --</option>
+    </select>
+    <br>
+    Groupe : <br>
+    <select id="groupe" name="groupe">
+      <option value="">--Groupe--</option>
     </select>
     <br>
     Parcours : <br>
-    <select id="salah" name="parcours">
-      <option value="complexe" selected>Système Complèxe</option>
-      <option value="africa">Doing business in africa</option>
+    <select id="parcours" name="parcours">
+      <option value="">-- Parcours S8 --</option>
     </select>
     <br>
+    Option : <br>
+    <select id="option" name="option">
+      <option value="">-- Option 3A --</option>
+    </select>
     <br>
     <br>
     </div>
