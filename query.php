@@ -9,12 +9,19 @@
 		case 'select':
 			$tablename = $_GET["tablename"];
 			$columns = $_GET["columns"];
-			$where = $_GET["where"];
+			if ($columns != "*") {
+				$columns = explode(";", $columns);
+			}
 
-			$columns = explode(";", $columns);
-			$where = explode("=", $where);
+			if (isset($_GET["where"])) {
+				$where = $_GET["where"];
+				$where = explode("=", $where);
+				$table = $linker->select($tablename, $columns, $where[0], $where[1]);
+			} else {
+				$table = $linker->select($tablename, $columns);
+			}
 
-			$table = $linker->select($tablename, $columns, $where[0], $where[1]);
+
 
 			echo $table->get_json();
 			break;

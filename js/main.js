@@ -8,7 +8,7 @@ $(document).ready(function() {
     // chargement des régions
     $.ajax({
         url: 'query.php',
-        data: 'go', // on envoie $_GET['go']
+        data: {query: "select", tablename: ""}, // on envoie $_GET['go']
         dataType: 'json', // on veut un retour JSON
         success: function(json) {
             $.each(json, function(index, value) { // pour chaque noeud JSON
