@@ -29,7 +29,7 @@
 	// Classes definitions
 
 	class Row implements iRow {
-		var $row;
+		private $row;
 
 		function __construct($columns = []) {
 			if ($columns) {
@@ -58,8 +58,8 @@
 
 	class Table implements iTable {
 
-		var $tablename;
-		var $rows;
+		private $tablename;
+		private $rows;
 
 		function __construct($tablename) {
 			$this->$tablename = $tablename;
@@ -95,11 +95,11 @@
 	}
 
 	class MySQLLinker implements iQueryBuilder {
-		var $host;
-		var $user;
-		var $pass;
-		var $database;
-		var $connection;
+		private $host;
+		private $user;
+		private $pass;
+		private $database;
+		private $connection;
 
 		function __construct($host, $user, $pass, $database) {
 			$this->$host = $host;
