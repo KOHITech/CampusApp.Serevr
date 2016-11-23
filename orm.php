@@ -125,7 +125,7 @@
 				$where_clause = sprintf($where_clause, $column, $value);
 				$sql =  $sql . " " . $where_clause;
 			}
-			
+
 			if ($columns != "*") {
 				for ($i=0; $i < count($columns); $i++) { 
 					$columns[$i] = "`" . $columns[$i] . "`";
@@ -139,7 +139,7 @@
 			$retval = mysqli_query( $this->connection, $sql );
 
 			if(! $retval ) {
-				die('Could not get data: ' . mysqli_error());
+				die('Could not get data: ' . mysqli_error($this->connection));
 			}
 
 			$table = new Table($tablename);
@@ -181,7 +181,7 @@
 			$retval = mysqli_query( $this->connection, $sql );
 
 			if(! $retval ) {
-				die('Could not insert data: ' . mysqli_error());
+				die('Could not insert data: ' . mysqli_error($this->connection));
 			}
 
 			$this->close();
@@ -196,7 +196,7 @@
 			$retval = mysqli_query( $this->connection, $sql );
 
 			if(! $retval ) {
-				die('Could not delete data: ' . mysqli_error());
+				die('Could not delete data: ' . mysqli_error($this->connection));
 			}
 
 			$this->close();
@@ -219,7 +219,7 @@
 			$retval = mysqli_query( $this->connection, $sql );
 
 			if(! $retval ) {
-				die('Could not update data: ' . mysqli_error());
+				die('Could not update data: ' . mysqli_error($this->connection));
 			}
 
 			$this->close();
