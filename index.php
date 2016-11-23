@@ -1,19 +1,3 @@
-
-<?php 
-mysqli_connect("localhost","root","",'kohi_db');
-
-if($bdd = mysqli_connect('localhost', 'root', '', 'kohi_db'))
-{
-  // Si la connexion a réussi, rien ne se passe.
-}
-else // Mais si elle rate…
-{
-  echo 'Erreur connexion BD'; // On affiche un message d'erreur.
-}
-
-mysqli_close($bdd);
-?>
-
 <!DOCTYPE html>
 <html>
  <head>
