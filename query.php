@@ -16,6 +16,9 @@
 			if (isset($_GET["where"])) {
 				$where = $_GET["where"];
 				$where = explode("=", $where);
+				if ( ! is_numeric($where[1])) {
+					$where[1] = '"' . $where[1] . '"';
+				}
 				$table = $linker->select($tablename, $columns, $where[0], $where[1]);
 			} else {
 				$table = $linker->select($tablename, $columns);
