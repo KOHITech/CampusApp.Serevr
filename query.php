@@ -27,10 +27,28 @@
 			} else {
 				$table = $linker->select($tablename, $columns);
 			}
-
-
-
+			
 			echo $table->get_json();
+			break;
+		
+		case 'create':
+			$tablename = $_POST["tablename"];
+			$row = $_POST["row"];
+
+			$row = explode(";", $row);
+			for ($i=0; $i < cout($row); $i++) { 
+				$row[i] = explode("=", $row[i]);
+			}
+
+			$row_class = new Row();
+			foreach ($row as $item) {
+				if ( ! is_numeric($item[1])) {
+						$item[1] = '"' . $item[1] . '"';
+				}
+				$row_class->set($item[0], $item[1]);
+			}
+
+			$linker->create($tablename, $row_class);
 			break;
 		
 		default:
