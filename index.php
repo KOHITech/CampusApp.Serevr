@@ -477,7 +477,7 @@
 
 </form>
 
-      <script src="js/jquery-3.1.1.min"></script>
+      <script src="js/jquery-3.1.1.min.js"></script>
       <script src="js/main.js"></script>
       <script src="dist/js/bootstrap.min.js"></script>
 
