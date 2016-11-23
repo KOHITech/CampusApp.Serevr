@@ -3,7 +3,7 @@
 
 	require "orm.php";
 
-	$linker = new MySQLLinker("localhost", "root", "", "kohi_db");
+	$linker = new MySQLLinker("localhost", "kohi", "kohi", "kohi_db");
 
 	switch ($query) {
 		case 'select':
