@@ -1,5 +1,9 @@
-<?php 
-	$query = $_GET["query"];
+<?php
+	if (isset($_GET["query"])) {
+		$query = $_GET["query"];
+	} elseif (isset($_POST["query"])) {
+		$query = $_POST["query"];
+	}
 
 	require "orm.php";
 
