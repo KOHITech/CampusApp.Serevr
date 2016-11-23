@@ -18,28 +18,26 @@
  <body>
 <form method="post" action="">
   <div>
-  Voir l'emploi du temps pour : <br>
-    <select name="annee" id="annee">
+    <p class="hide">Voir l'emploi du temps pour :</p>
+    <select class="hide" name="annee" id="annee">
       <option value="" >-- Année --</option>
     </select>
-    <br>
-    Groupe : <br>
-    <select id="groupe" name="groupe">
+
+    <p class="hide">Groupe : </p>
+    <select class="hide" id="groupe" name="groupe">
       <option value="">--Groupe--</option>
     </select>
-    <br>
-    Parcours : <br>
-    <select id="parcours" name="parcours">
+
+    <p class="hide">Parcours : </p>
+    <select class="hide" id="parcours" name="parcours">
       <option value="">-- Parcours S8 --</option>
     </select>
-    <br>
-    Option : <br>
-    <select id="option" name="option">
+    
+    <p class="hide">Option : </p>
+    <select class="hide" id="option" name="option">
       <option value="">-- Option 3A --</option>
     </select>
-    <br>
-    <br>
-    </div>
+  </div>
 
 
 
