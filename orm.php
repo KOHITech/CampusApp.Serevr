@@ -23,7 +23,7 @@
 		public function select($tablename, $columns, $column = null, $value = null);
 		public function create($tablename, $row);
 		public function delete($tablename, $column, $value);
-		public function update($tablename, $columns, $row, $column, $value);
+		public function update($tablename, $row, $column, $value);
 	}
 
 	// Classes definitions
@@ -202,14 +202,14 @@
 			$this->close();
 		}
 
-		public function update($tablename, $columns, $row, $column, $value) {
+		public function update($tablename, $row, $column, $value) {
 			$this->connect();
 
 			$sql = "UPDATE %s SET %s WHERE `%s` = %s";
 			$sql = sprintf($sql, $tablename);
 
 			$tmp_str = [];
-			foreach ($columns as $column) {
+			foreach (array_keys($row->geta()) as $column) {
 				array_push($tmp_str, "`$column` = " . $row[$column]);
 			}
 
