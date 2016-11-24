@@ -248,7 +248,7 @@
 
 			$this->close();
 
-			return $tables;
+			return json_encode($tables);
 		}
 
 		public function get_table_info($tablename) {
