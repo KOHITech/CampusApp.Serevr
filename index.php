@@ -37,6 +37,12 @@
     <select class="hide" id="option" name="option">
       <option value="">-- Option 3A --</option>
     </select>
+
+    <p class="hide">Metier : </p>
+    <select class="hide" id="metier" name="metier">
+      <option value="">-- Metier --</option>
+    </select>
+
   </div>
 
 
