@@ -11,6 +11,16 @@
 	switch ($query) {
 		case 'select':
 			$tablename = $_GET["tablename"];
+			if($tablename == '__tables') {
+				$tables = $linker->get_tables($tablename);
+				print_r($tables);
+				break;
+			} elseif ($tablename = '__table') {
+				$tablename = $_GET["name"];
+				$table = $linker->get_table_info($tablename);
+				echo $table->get_json();
+				break;
+			}
 			$columns = $_GET["columns"];
 			if ($columns != "*") {
 				$columns = explode(";", $columns);
