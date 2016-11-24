@@ -15,7 +15,7 @@
 				$tables = $linker->get_tables($tablename);
 				print_r($tables);
 				break;
-			} elseif ($tablename = '__table') {
+			} elseif ($tablename == '__table') {
 				$tablename = $_GET["name"];
 				$table = $linker->get_table_info($tablename);
 				echo $table->get_json();
