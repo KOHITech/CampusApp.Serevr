@@ -24,6 +24,9 @@
 		public function create($tablename, $row);
 		public function delete($tablename, $column, $value);
 		public function update($tablename, $row, $column, $value);
+		public function get_tables();
+		public function get_table_info($tablename);
+
 	}
 
 	// Classes definitions
@@ -222,6 +225,60 @@
 			}
 
 			$this->close();
+		}
+
+		public function get_tables() {
+			$this->connect();
+
+			$sql = "SHOW TABLES";
+
+			$retval = mysqli_query( $this->connection, $sql );
+
+			if(! $retval ) {
+				die('Could not get data: ' . mysqli_error($this->connection));
+			}
+
+			$tables = [];
+						
+			while($row = mysqli_fetch_row($retval)) {
+				array_push($tables, $row[0]);
+			}
+
+			mysqli_free_result($retval);
+
+			$this->close();
+
+			return $tables;
+		}
+
+		public function get_table_info($tablename) {
+			$this->connect();
+
+			$sql = "DESCRIBE `$tablename`";
+
+			$retval = mysqli_query( $this->connection, $sql );
+
+			if(! $retval ) {
+				die('Could not get data: ' . mysqli_error($this->connection));
+			}
+
+			$table = new Table("$tablename.info");
+						
+			while($row = mysqli_fetch_assoc($retval)) {
+				$row_class = new Row($columns);
+
+				foreach ($row as $key => $value) {
+					$row_class->set($key, $value);
+				}
+				
+				$table->add_row($row_class);
+			}
+
+			mysqli_free_result($retval);
+
+			$this->close();
+
+			return $table;
 		}
 	}
 	
