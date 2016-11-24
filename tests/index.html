@@ -19,17 +19,25 @@
 		<div class="form-group">
 		  <label for="page">Select page:</label>
 		  <select class="form-control" id="page">
+		    <option value="">-- Select a file --</option>
 		    <option value="query">query.php</option>
 		  </select>
 		  <div id="query" class="hide">
 			  <label for="query_name">Select query:</label>
 			  <select class="form-control" id="query_name">
-			    <option value="select">Select</option>
-			    <option value="update">Update</option>
-			    <option value="create">Create</option>
-			    <option value="delete">Delete</option>
+			    <option value="select:GET">Select</option>
+			    <option value="update:POST">Update</option>
+			    <option value="create:POST">Create</option>
+			    <option value="delete:POST">Delete</option>
 			  </select>
+			  <label for="table">Select table:</label>
+			  <select class="form-control" id="table">
+			  </select>
+			  <label for="data">Data one per line (name = value):</label>
+			  <textarea class="form-control" rows="5" id="data"></textarea>
+			  <input type="submit" class="btn btn-info go" value="Submit">
 		  </div>
+		  <div id="result"></div>
 		</div>
 	</div>
 
