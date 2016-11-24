@@ -18,7 +18,7 @@
 			} elseif ($tablename == '__table') {
 				$tablename = $_GET["name"];
 				$table = $linker->get_table_info($tablename);
-				echo $table->get_json();
+				echo $table->get_json();	
 				break;
 			}
 			$columns = $_GET["columns"];
@@ -27,7 +27,7 @@
 			}
 			if (isset($_GET["where"])) {
 				$where = $_GET["where"];
-				$where = explode("=", $where);
+				$where = explode("~", $where);
 				if ( ! is_numeric($where[1])) {
 					$where[1] = '"' . $where[1] . '"';
 				}
@@ -45,7 +45,7 @@
 
 			$row = explode(";", $row);
 			for ($i=0; $i < cout($row); $i++) { 
-				$row[i] = explode("=", $row[i]);
+				$row[i] = explode("~", $row[i]);
 			}
 
 			$row_class = new Row();
@@ -63,7 +63,7 @@
 			$tablename = $_POST["tablename"];
 			$where = $_POST["where"];
 
-			$where = explode("=", $where);
+			$where = explode("~", $where);
 			if ( ! is_numeric($where[1])) {
 				$where[1] = '"' . $where[1] . '"';
 			}
@@ -76,14 +76,14 @@
 			$where = $_POST["where"];
 			$row = $_POST["row"];
 
-			$where = explode("=", $where);
+			$where = explode("~", $where);
 			if ( ! is_numeric($where[1])) {
 				$where[1] = '"' . $where[1] . '"';
 			}
 
 			$row = explode(";", $row);
 			for ($i=0; $i < cout($row); $i++) { 
-				$row[i] = explode("=", $row[i]);
+				$row[i] = explode("~", $row[i]);
 			}
 
 			$row_class = new Row();
