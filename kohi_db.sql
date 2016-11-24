@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.15.5
--- http://www.phpmyadmin.net
+-- version 4.6.4
+-- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Jeu 24 Novembre 2016 à 00:01
--- Version du serveur :  5.6.30
--- Version de PHP :  5.5.35
+-- Généré le :  Jeu 24 Novembre 2016 à 14:17
+-- Version du serveur :  5.7.14
+-- Version de PHP :  5.6.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `kohi_db`
 --
+CREATE DATABASE IF NOT EXISTS `kohi_db` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `kohi_db`;
 
 -- --------------------------------------------------------
 
@@ -26,7 +28,7 @@ SET time_zone = "+00:00";
 -- Structure de la table `association`
 --
 
-CREATE TABLE IF NOT EXISTS `association` (
+CREATE TABLE `association` (
   `association_id` int(11) NOT NULL,
   `group_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
@@ -44,7 +46,7 @@ CREATE TABLE IF NOT EXISTS `association` (
 -- Structure de la table `branch`
 --
 
-CREATE TABLE IF NOT EXISTS `branch` (
+CREATE TABLE `branch` (
   `short_name` varchar(50) NOT NULL,
   `full_name` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -55,10 +57,20 @@ CREATE TABLE IF NOT EXISTS `branch` (
 -- Structure de la table `groupe`
 --
 
-CREATE TABLE IF NOT EXISTS `groupe` (
+CREATE TABLE `groupe` (
   `short_name` varchar(20) NOT NULL,
   `full_name` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `groupe`
+--
+
+INSERT INTO `groupe` (`short_name`, `full_name`) VALUES
+('1G1A', 'Groupe 1A '),
+('1G1B', 'Groupe 1B'),
+('1G2A', 'Groupe 2A'),
+('1G2B', 'Groupe 2B');
 
 -- --------------------------------------------------------
 
@@ -66,7 +78,7 @@ CREATE TABLE IF NOT EXISTS `groupe` (
 -- Structure de la table `groupe_projet`
 --
 
-CREATE TABLE IF NOT EXISTS `groupe_projet` (
+CREATE TABLE `groupe_projet` (
   `group_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `user1_id` int(11) NOT NULL,
@@ -79,7 +91,7 @@ CREATE TABLE IF NOT EXISTS `groupe_projet` (
 -- Structure de la table `job`
 --
 
-CREATE TABLE IF NOT EXISTS `job` (
+CREATE TABLE `job` (
   `short_name` varchar(20) NOT NULL,
   `full_name` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -90,7 +102,7 @@ CREATE TABLE IF NOT EXISTS `job` (
 -- Structure de la table `parcours`
 --
 
-CREATE TABLE IF NOT EXISTS `parcours` (
+CREATE TABLE `parcours` (
   `short_name` varchar(20) NOT NULL,
   `full_name` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -101,7 +113,7 @@ CREATE TABLE IF NOT EXISTS `parcours` (
 -- Structure de la table `projet`
 --
 
-CREATE TABLE IF NOT EXISTS `projet` (
+CREATE TABLE `projet` (
   `project_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `group_id` int(11) NOT NULL,
@@ -117,7 +129,7 @@ CREATE TABLE IF NOT EXISTS `projet` (
 -- Structure de la table `publication`
 --
 
-CREATE TABLE IF NOT EXISTS `publication` (
+CREATE TABLE `publication` (
   `publication_id` int(11) NOT NULL,
   `group_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
@@ -132,7 +144,7 @@ CREATE TABLE IF NOT EXISTS `publication` (
 -- Structure de la table `room`
 --
 
-CREATE TABLE IF NOT EXISTS `room` (
+CREATE TABLE `room` (
   `room_id` int(11) NOT NULL,
   `room_name` varchar(20) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -143,7 +155,7 @@ CREATE TABLE IF NOT EXISTS `room` (
 -- Structure de la table `subject`
 --
 
-CREATE TABLE IF NOT EXISTS `subject` (
+CREATE TABLE `subject` (
   `subject_id` int(11) NOT NULL,
   `subject_name` varchar(50) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
@@ -154,7 +166,7 @@ CREATE TABLE IF NOT EXISTS `subject` (
 -- Structure de la table `task`
 --
 
-CREATE TABLE IF NOT EXISTS `task` (
+CREATE TABLE `task` (
   `task_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `project_id` int(11) NOT NULL,
@@ -175,7 +187,7 @@ CREATE TABLE IF NOT EXISTS `task` (
 -- Structure de la table `userr`
 --
 
-CREATE TABLE IF NOT EXISTS `userr` (
+CREATE TABLE `userr` (
   `user_id` int(11) NOT NULL,
   `indentifiant` varchar(250) NOT NULL,
   `passwordd` varchar(250) NOT NULL,
@@ -192,10 +204,19 @@ CREATE TABLE IF NOT EXISTS `userr` (
 -- Structure de la table `year`
 --
 
-CREATE TABLE IF NOT EXISTS `year` (
+CREATE TABLE `year` (
   `short_name` varchar(50) NOT NULL,
   `full_name` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `year`
+--
+
+INSERT INTO `year` (`short_name`, `full_name`) VALUES
+('1A', 'Premiere Annee '),
+('2A', 'Deuxieme Annee'),
+('3A', 'Troisieme Annee');
 
 --
 -- Index pour les tables exportées
