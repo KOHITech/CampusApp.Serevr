@@ -4,7 +4,6 @@
 	} elseif (isset($_POST["query"])) {
 		$query = $_POST["query"];
 	}
-
 	require "orm.php";
 
 	$linker = new MySQLLinker("localhost", "kohi", "kohi", "kohi_db");
@@ -16,7 +15,6 @@
 			if ($columns != "*") {
 				$columns = explode(";", $columns);
 			}
-
 			if (isset($_GET["where"])) {
 				$where = $_GET["where"];
 				$where = explode("=", $where);

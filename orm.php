@@ -118,7 +118,7 @@
 		public function select($tablename, $columns, $column = null, $value = null) {
 			$this->connect();
 
-			$sql = "SELECT %s FROM %s";
+			$sql = "SELECT %s FROM `%s`";
 			$where_clause = "WHERE `%s` = %s";
 
 			if ($column && $value) {
@@ -135,7 +135,6 @@
 				$tmp_str = "*";
 			}
 			$sql = sprintf($sql, $tmp_str, $tablename);
-
 			$retval = mysqli_query( $this->connection, $sql );
 
 			if(! $retval ) {
@@ -143,7 +142,7 @@
 			}
 
 			$table = new Table($tablename);
-
+						
 			while($row = mysqli_fetch_assoc($retval)) {
 				$row_class = new Row($columns);
 
