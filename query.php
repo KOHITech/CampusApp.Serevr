@@ -75,7 +75,7 @@
 			$tablename = $_POST["tablename"];
 			$where = $_POST["where"];
 			$row = $_POST["row"];
-
+			
 			$where = explode("~", $where);
 			if ( ! is_numeric($where[1])) {
 				$where[1] = '"' . $where[1] . '"';
