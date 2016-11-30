@@ -23,16 +23,21 @@
       <option value="" >-- Année --</option>
     </select>
 
+    <p class="hide">Parcours : </p>
+    <select class="hide" id="parcours" name="parcours">
+      <option value="">-- Parcours S8 --</option>
+    </select>
+
     <p class="hide">Groupe : </p>
     <select class="hide" id="groupe" name="groupe">
       <option value="">--Groupe--</option>
     </select>
 
-    <p class="hide">Parcours : </p>
-    <select class="hide" id="parcours" name="parcours">
-      <option value="">-- Parcours S8 --</option>
+    <p class="hide">Electif : </p>
+    <select class="hide" id="electif" name="electif">
+      <option value="">--Electif--</option>
     </select>
-    
+
     <p class="hide">Option : </p>
     <select class="hide" id="option" name="option">
       <option value="">-- Option 3A --</option>
@@ -482,7 +487,7 @@
 </form>
 
       <script src="js/jquery-3.1.1.min.js"></script>
-      <script src="js/main.js"></script>
+      <script src="js/maindd.js"></script>
       <script src="dist/js/bootstrap.min.js"></script>
 
 
