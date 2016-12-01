@@ -1,0 +1,531 @@
+
+
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+			<meta name="description" content="">
+			<meta name="author" content="">
+			<link rel="icon" type="image/x-icon" href="img/campusapp.ico">
+
+			<title>ECC Dashboard</title>
+
+			<!-- Bootstrap core CSS -->
+			
+			<link href="dist/css/bootstrap.min.css" rel="stylesheet">
+			
+			<link href="css/dashboard.css" rel="stylesheet">
+		</head>
+<body>
+<div class="conteneur1">
+	<div class="R1">
+		<p class="T1">Élèves inscrits</p>
+		<p class="Info1">Info1</p>
+		<p class="Info2"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+	info2</p>
+		<p class="T2">Dernière semaine</p>
+
+	</div><!--R1-->
+
+	
+	
+	<div class="R3">
+		<p class="T1">Tâches planifiées</p>
+		<p class="Info1">Info5</p>
+		<p class="Info2"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+	info4</p>
+		<p class="T2">Dernière semaine</p>
+
+	</div><!--R3-->
+	
+	<div class="R2">
+		<p class="T1">Projets actifs</p>
+		<p class="Info1">Info3</p>
+		<p class="Info2"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
+	info4</p>
+		<p class="T2">Dernière semaine</p>
+
+	</div><!--R2-->
+	
+	<div style="clear: both; float: none; height: 0;"></div>
+	
+</div><!--conteneur1-->
+
+<div class="Conteneur2">
+	<form method="post" action="">
+
+	<div class="block1">
+	  <p class="T3">Voir l'emploi du temps pour : <br></p>
+		
+		<div class="b1">
+		<p class="T4">Année :</p>
+			<select name="annee" id="annee">
+			<option value="" >-- Année --</option>
+			</select>
+			<p class="T4">Groupe :</p>
+			<select id="groupe" name="groupe">
+			<option value="">--Groupe--</option>
+			</select>
+		</div><!--b1-->
+		
+		<div class="b2">
+			<p class="T4">Parcours :</p>
+			<select id="parcours" name="parcours">
+			<option value="">-- Parcours S8 --</option>
+			</select>
+			<p class="T4">Option :</p>
+			<select id="option" name="option">
+			<option value="">-- Option 3A --</option>
+			</select>
+			<br>
+			<br>
+		</div><!--b2-->
+	</div> <!--block1-->
+
+
+
+
+
+	<table class="tableau" >
+	  <tr class="ligne"> <th class="colonne">Lundi</th> <th class="colonne">Mardi</th> <th class="colonne">Mercredi</th> <th class="colonne">Jeudi</th> <th class="colonne">Vendredi</th> </tr>
+	<!-- début de la journée -->
+	<!-- de 8H à 10H -->
+	  <tr class="ligne">
+	  <!-- Lundi -->
+		<td class="colonne"> 
+		Matière : <br>
+		  <select name="matière">
+			<option value="1" >matière 1</option>
+			<option value="2" >matière 2</option>
+			<option value="3" >matière 3</option>
+			<option value="4" >matière 4</option>
+			<option value="5" >matière 5</option>
+		  </select>
+		  <br> Salle : <br>
+		  <select name="Salle">
+			<option value="boltzman" >boltzman</option>
+			<option value="ibn sina" >ibn sina</option>
+			<option value="poincaré" >poincaré</option>
+			<option value="archimède" >archiméde</option>
+			<option value="ibn rochd" >ibn rochd</option>
+		  </select>
+		</td>
+	  <!-- Mardi -->
+		<td class="colonne"> 
+		Matière : <br>
+		  <select name="matière">
+			<option value="1" >matière 1</option>
+			<option value="2" >matière 2</option>
+			<option value="3" >matière 3</option>
+			<option value="4" >matière 4</option>
+			<option value="5" >matière 5</option>
+		  </select>
+		  <br> Salle : <br>
+		  <select name="Salle">
+			<option value="boltzman" >boltzman</option>
+			<option value="ibn sina" >ibn sina</option>
+			<option value="poincaré" >poincaré</option>
+			<option value="archimède" >archiméde</option>
+			<option value="ibn rochd" >ibn rochd</option>
+		  </select>
+		</td>
+	  <!-- Mercredi -->
+		<td class="colonne"> 
+		Matière : <br>
+		  <select name="matière">
+			<option value="1" >matière 1</option>
+			<option value="2" >matière 2</option>
+			<option value="3" >matière 3</option>
+			<option value="4" >matière 4</option>
+			<option value="5" >matière 5</option>
+		  </select>
+		  <br> Salle : <br>
+		  <select name="Salle">
+			<option value="boltzman" >boltzman</option>
+			<option value="ibn sina" >ibn sina</option>
+			<option value="poincaré" >poincaré</option>
+			<option value="archimède" >archiméde</option>
+			<option value="ibn rochd" >ibn rochd</option>
+		  </select>
+		</td>
+	  <!-- Jeudi -->
+		<td class="colonne"> 
+		Matière : <br>
+		  <select name="matière">
+			<option value="1" >matière 1</option>
+			<option value="2" >matière 2</option>
+			<option value="3" >matière 3</option>
+			<option value="4" >matière 4</option>
+			<option value="5" >matière 5</option>
+		  </select>
+		  <br> Salle : <br>
+		  <select name="Salle">
+			<option value="boltzman" >boltzman</option>
+			<option value="ibn sina" >ibn sina</option>
+			<option value="poincaré" >poincaré</option>
+			<option value="archimède" >archiméde</option>
+			<option value="ibn rochd" >ibn rochd</option>
+		  </select>
+		</td>
+	  <!-- Vendredi -->
+		<td class="colonne"> 
+		Matière : <br>
+		  <select name="matière">
+			<option value="1" >matière 1</option>
+			<option value="2" >matière 2</option>
+			<option value="3" >matière 3</option>
+			<option value="4" >matière 4</option>
+			<option value="5" >matière 5</option>
+		  </select>
+		  <br> Salle : <br>
+		  <select name="Salle">
+			<option value="boltzman" >boltzman</option>
+			<option value="ibn sina" >ibn sina</option>
+			<option value="poincaré" >poincaré</option>
+			<option value="archimède" >archiméde</option>
+			<option value="ibn rochd" >ibn rochd</option>
+		  </select>
+		</td>
+	  </tr>
+
+
+	<!-- de 10H à 12H -->
+	  <tr class="ligne">
+	  <!-- Lundi -->
+		<td class="colonne"> 
+		Matière : <br>
+		  <select name="matière">
+			<option value="1" >matière 1</option>
+			<option value="2" >matière 2</option>
+			<option value="3" >matière 3</option>
+			<option value="4" >matière 4</option>
+			<option value="5" >matière 5</option>
+		  </select>
+		  <br> Salle : <br>
+		  <select name="Salle">
+			<option value="boltzman" >boltzman</option>
+			<option value="ibn sina" >ibn sina</option>
+			<option value="poincaré" >poincaré</option>
+			<option value="archimède" >archiméde</option>
+			<option value="ibn rochd" >ibn rochd</option>
+		  </select>
+		</td>
+	  <!-- Mardi -->
+		<td class="colonne"> 
+		Matière : <br>
+		  <select name="matière">
+			<option value="1" >matière 1</option>
+			<option value="2" >matière 2</option>
+			<option value="3" >matière 3</option>
+			<option value="4" >matière 4</option>
+			<option value="5" >matière 5</option>
+		  </select>
+		  <br> Salle : <br>
+		  <select name="Salle">
+			<option value="boltzman" >boltzman</option>
+			<option value="ibn sina" >ibn sina</option>
+			<option value="poincaré" >poincaré</option>
+			<option value="archimède" >archiméde</option>
+			<option value="ibn rochd" >ibn rochd</option>
+		  </select>
+		</td>
+	  <!-- Mercredi -->
+		<td class="colonne"> 
+		Matière : <br>
+		  <select name="matière">
+			<option value="1" >matière 1</option>
+			<option value="2" >matière 2</option>
+			<option value="3" >matière 3</option>
+			<option value="4" >matière 4</option>
+			<option value="5" >matière 5</option>
+		  </select>
+		  <br> Salle : <br>
+		  <select name="Salle">
+			<option value="boltzman" >boltzman</option>
+			<option value="ibn sina" >ibn sina</option>
+			<option value="poincaré" >poincaré</option>
+			<option value="archimède" >archiméde</option>
+			<option value="ibn rochd" >ibn rochd</option>
+		  </select>
+		</td>
+	  <!-- Jeudi -->
+		<td class="colonne"> 
+		Matière : <br>
+		  <select name="matière">
+			<option value="1" >matière 1</option>
+			<option value="2" >matière 2</option>
+			<option value="3" >matière 3</option>
+			<option value="4" >matière 4</option>
+			<option value="5" >matière 5</option>
+		  </select>
+		  <br> Salle : <br>
+		  <select name="Salle">
+			<option value="boltzman" >boltzman</option>
+			<option value="ibn sina" >ibn sina</option>
+			<option value="poincaré" >poincaré</option>
+			<option value="archimède" >archiméde</option>
+			<option value="ibn rochd" >ibn rochd</option>
+		  </select>
+		</td>
+	  <!-- Vendredi -->
+		<td class="colonne"> 
+		Matière : <br>
+		  <select name="matière">
+			<option value="1" >matière 1</option>
+			<option value="2" >matière 2</option>
+			<option value="3" >matière 3</option>
+			<option value="4" >matière 4</option>
+			<option value="5" >matière 5</option>
+		  </select>
+		  <br> Salle : <br>
+		  <select name="Salle">
+			<option value="boltzman" >boltzman</option>
+			<option value="ibn sina" >ibn sina</option>
+			<option value="poincaré" >poincaré</option>
+			<option value="archimède" >archiméde</option>
+			<option value="ibn rochd" >ibn rochd</option>
+		  </select>
+		</td>
+	  </tr>
+
+
+
+
+	<!-- Pause midi -->
+	  <tr class="ligne">
+	  <!-- Lundi -->
+		<td class="colonne"> Pause
+
+	  <!-- Mardi -->
+		<td class="colonne"> Pause
+	  <!-- Mercredi -->
+		<td class="colonne"> Pause
+	  <!-- Jeudi -->
+		<td class="colonne"> Pause
+	  <!-- Vendredi -->
+		<td class="colonne"> Pause
+
+	  </tr>
+
+
+	<!-- de 14H à 16H -->
+
+	  <tr class="ligne">
+	  <!-- Lundi -->
+		<td class="colonne"> 
+		Matière : <br>
+		  <select name="matière">
+			<option value="1" >matière 1</option>
+			<option value="2" >matière 2</option>
+			<option value="3" >matière 3</option>
+			<option value="4" >matière 4</option>
+			<option value="5" >matière 5</option>
+		  </select>
+		  <br> Salle : <br>
+		  <select name="Salle">
+			<option value="boltzman" >boltzman</option>
+			<option value="ibn sina" >ibn sina</option>
+			<option value="poincaré" >poincaré</option>
+			<option value="archimède" >archiméde</option>
+			<option value="ibn rochd" >ibn rochd</option>
+		  </select>
+		</td>
+	  <!-- Mardi -->
+		<td class="colonne"> 
+		Matière : <br>
+		  <select name="matière">
+			<option value="1" >matière 1</option>
+			<option value="2" >matière 2</option>
+			<option value="3" >matière 3</option>
+			<option value="4" >matière 4</option>
+			<option value="5" >matière 5</option>
+		  </select>
+		  <br> Salle : <br>
+		  <select name="Salle">
+			<option value="boltzman" >boltzman</option>
+			<option value="ibn sina" >ibn sina</option>
+			<option value="poincaré" >poincaré</option>
+			<option value="archimède" >archiméde</option>
+			<option value="ibn rochd" >ibn rochd</option>
+		  </select>
+		</td>
+	  <!-- Mercredi -->
+		<td class="colonne"> 
+		Matière : <br>
+		  <select name="matière">
+			<option value="1" >matière 1</option>
+			<option value="2" >matière 2</option>
+			<option value="3" >matière 3</option>
+			<option value="4" >matière 4</option>
+			<option value="5" >matière 5</option>
+		  </select>
+		  <br> Salle : <br>
+		  <select name="Salle">
+			<option value="boltzman" >boltzman</option>
+			<option value="ibn sina" >ibn sina</option>
+			<option value="poincaré" >poincaré</option>
+			<option value="archimède" >archiméde</option>
+			<option value="ibn rochd" >ibn rochd</option>
+		  </select>
+		</td>
+	  <!-- Jeudi -->
+		<td class="colonne"> 
+		Matière : <br>
+		  <select name="matière">
+			<option value="1" >matière 1</option>
+			<option value="2" >matière 2</option>
+			<option value="3" >matière 3</option>
+			<option value="4" >matière 4</option>
+			<option value="5" >matière 5</option>
+		  </select>
+		  <br> Salle : <br>
+		  <select name="Salle">
+			<option value="boltzman" >boltzman</option>
+			<option value="ibn sina" >ibn sina</option>
+			<option value="poincaré" >poincaré</option>
+			<option value="archimède" >archiméde</option>
+			<option value="ibn rochd" >ibn rochd</option>
+		  </select>
+		</td>
+	  <!-- Vendredi -->
+		<td class="colonne"> 
+		Matière : <br>
+		  <select name="matière">
+			<option value="1" >matière 1</option>
+			<option value="2" >matière 2</option>
+			<option value="3" >matière 3</option>
+			<option value="4" >matière 4</option>
+			<option value="5" >matière 5</option>
+		  </select>
+		  <br> Salle : <br>
+		  <select name="Salle">
+			<option value="boltzman" >boltzman</option>
+			<option value="ibn sina" >ibn sina</option>
+			<option value="poincaré" >poincaré</option>
+			<option value="archimède" >archiméde</option>
+			<option value="ibn rochd" >ibn rochd</option>
+		  </select>
+		</td>
+	  </tr>
+	<!-- de 16H à 18H -->
+
+	  <tr class="ligne">
+	  <!-- Lundi -->
+		<td class="colonne"> 
+		Matière : <br>
+		  <select name="matière">
+			<option value="1" >matière 1</option>
+			<option value="2" >matière 2</option>
+			<option value="3" >matière 3</option>
+			<option value="4" >matière 4</option>
+			<option value="5" >matière 5</option>
+		  </select>
+		  <br> Salle : <br>
+		  <select name="Salle">
+			<option value="boltzman" >boltzman</option>
+			<option value="ibn sina" >ibn sina</option>
+			<option value="poincaré" >poincaré</option>
+			<option value="archimède" >archiméde</option>
+			<option value="ibn rochd" >ibn rochd</option>
+		  </select>
+		</td>
+	  <!-- Mardi -->
+		<td class="colonne"> 
+		Matière : <br>
+		  <select name="matière">
+			<option value="1" >matière 1</option>
+			<option value="2" >matière 2</option>
+			<option value="3" >matière 3</option>
+			<option value="4" >matière 4</option>
+			<option value="5" >matière 5</option>
+		  </select>
+		  <br> Salle : <br>
+		  <select name="Salle">
+			<option value="boltzman" >boltzman</option>
+			<option value="ibn sina" >ibn sina</option>
+			<option value="poincaré" >poincaré</option>
+			<option value="archimède" >archiméde</option>
+			<option value="ibn rochd" >ibn rochd</option>
+		  </select>
+		</td>
+	  <!-- Mercredi -->
+		<td class="colonne"> 
+		Matière : <br>
+		  <select name="matière">
+			<option value="1" >matière 1</option>
+			<option value="2" >matière 2</option>
+			<option value="3" >matière 3</option>
+			<option value="4" >matière 4</option>
+			<option value="5" >matière 5</option>
+		  </select>
+		  <br> Salle : <br>
+		  <select name="Salle">
+			<option value="boltzman" >boltzman</option>
+			<option value="ibn sina" >ibn sina</option>
+			<option value="poincaré" >poincaré</option>
+			<option value="archimède" >archiméde</option>
+			<option value="ibn rochd" >ibn rochd</option>
+		  </select>
+		</td>
+	  <!-- Jeudi -->
+		<td class="colonne"> 
+		Matière : <br>
+		  <select name="matière">
+			<option value="1" >matière 1</option>
+			<option value="2" >matière 2</option>
+			<option value="3" >matière 3</option>
+			<option value="4" >matière 4</option>
+			<option value="5" >matière 5</option>
+		  </select>
+		  <br> Salle : <br>
+		  <select name="Salle">
+			<option value="boltzman" >boltzman</option>
+			<option value="ibn sina" >ibn sina</option>
+			<option value="poincaré" >poincaré</option>
+			<option value="archimède" >archiméde</option>
+			<option value="ibn rochd" >ibn rochd</option>
+		  </select>
+		</td>
+	  <!-- Vendredi -->
+		<td class="colonne"> 
+		Matière : <br>
+		  <select name="matière">
+			<option value="1" >matière 1</option>
+			<option value="2" >matière 2</option>
+			<option value="3" >matière 3</option>
+			<option value="4" >matière 4</option>
+			<option value="5" >matière 5</option>
+		  </select>
+		  <br> Salle : <br>
+		  <select name="Salle">
+			<option value="boltzman" >boltzman</option>
+			<option value="ibn sina" >ibn sina</option>
+			<option value="poincaré" >poincaré</option>
+			<option value="archimède" >archiméde</option>
+			<option value="ibn rochd" >ibn rochd</option>
+		  </select>
+		</td>
+	  </tr>
+
+
+
+	<!-- Fin de la journée -->
+
+	</table>
+
+	<br>
+	<input type="submit" value="Valider">
+</div><!--conteneur2-->
+
+</form>
+
+      <script src="js/jquery-3.1.1.min"></script>
+      <script src="js/main.js"></script>
+      <script src="dist/js/bootstrap.min.js"></script>
+
+
+ </body>
+</html>
