@@ -1,0 +1,25 @@
+.block1{
+	padding-top : 50px;
+	width: 700px;
+	margin:auto;
+}
+.R1{
+	width:30%;
+	float:left;
+	}
+.R2{
+	display: inline-block;
+	float:right;
+	}
+.R3{
+	display: inline-block;
+	margin-left:10%;
+	}
+.block2{
+	padding-top : 30px;
+	width: 700px;
+	margin:auto;
+}
+.Dorpdown{
+	float:left;
+}
