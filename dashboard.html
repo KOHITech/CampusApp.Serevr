@@ -1,531 +1,271 @@
 
 
 <!DOCTYPE html>
-	<html>
-		<head>
-			<meta charset="utf-8">
-			<meta http-equiv="X-UA-Compatible" content="IE=edge">
-			<meta name="viewport" content="width=device-width, initial-scale=1">
-			<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-			<meta name="description" content="">
-			<meta name="author" content="">
-			<link rel="icon" type="image/x-icon" href="img/campusapp.ico">
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="icon" type="image/x-icon" href="img/campusapp.ico">
 
-			<title>ECC Dashboard</title>
+		<title>ECC Dashboard</title>
 
-			<!-- Bootstrap core CSS -->
-			
-			<link href="dist/css/bootstrap.min.css" rel="stylesheet">
-			
-			<link href="css/dashboard.css" rel="stylesheet">
-		</head>
-<body>
-<div class="conteneur1">
-	<div class="R1">
-		<p class="T1">Élèves inscrits</p>
-		<p class="Info1">Info1</p>
-		<p class="Info2"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
-	info2</p>
-		<p class="T2">Dernière semaine</p>
-
-	</div><!--R1-->
-
-	
-	
-	<div class="R3">
-		<p class="T1">Tâches planifiées</p>
-		<p class="Info1">Info5</p>
-		<p class="Info2"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
-	info4</p>
-		<p class="T2">Dernière semaine</p>
-
-	</div><!--R3-->
-	
-	<div class="R2">
-		<p class="T1">Projets actifs</p>
-		<p class="Info1">Info3</p>
-		<p class="Info2"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>
-	info4</p>
-		<p class="T2">Dernière semaine</p>
-
-	</div><!--R2-->
-	
-	<div style="clear: both; float: none; height: 0;"></div>
-	
-</div><!--conteneur1-->
-
-<div class="Conteneur2">
-	<form method="post" action="">
-
-	<div class="block1">
-	  <p class="T3">Voir l'emploi du temps pour : <br></p>
+		<!-- Bootstrap core CSS -->
 		
-		<div class="b1">
-		<p class="T4">Année :</p>
-			<select name="annee" id="annee">
-			<option value="" >-- Année --</option>
-			</select>
-			<p class="T4">Groupe :</p>
-			<select id="groupe" name="groupe">
-			<option value="">--Groupe--</option>
-			</select>
-		</div><!--b1-->
+		<link href="dist/css/bootstrap.min.css" rel="stylesheet">
 		
-		<div class="b2">
-			<p class="T4">Parcours :</p>
-			<select id="parcours" name="parcours">
-			<option value="">-- Parcours S8 --</option>
-			</select>
-			<p class="T4">Option :</p>
-			<select id="option" name="option">
-			<option value="">-- Option 3A --</option>
-			</select>
-			<br>
-			<br>
-		</div><!--b2-->
-	</div> <!--block1-->
+		<link href="css/dashboard.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="conteneur1">
+			<div class="col-md-4 col-lg-4 col-sm-6 col-xs-6 dash-box">
+				<div class="R1">
+					<p class="T1">Élèves inscrits</p>
+					<p class="Info1">Info1</p>
+					<p class="Info2"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>info2</p>
+					<p class="T2">Dernière semaine</p>
+				</div><!--R1-->
+			</div>
 
+			
+			
+			<div class="col-md-4 col-lg-4 col-sm-6 col-xs-6 dash-box">
+				<div class="R3">
+						<p class="T1">Tâches planifiées</p>
+						<p class="Info1">Info5</p>
+						<p class="Info2"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>info4</p>
+						<p class="T2">Dernière semaine</p>
+				</div>
+			</div><!--R3-->
+			
+			<div class="col-md-4 col-lg-4 col-sm-6 col-xs-6 dash-box">
+				<div class="R3">
+						<p class="T1">Projets actifs</p>
+						<p class="Info1">Info3</p>
+						<p class="Info2"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>info4</p>
+						<p class="T2">Dernière semaine</p>
+				</div>
+			</div><!--R2-->
+			
+			<div style="clear: both; float: none; height: 0;"></div>
+			
+		</div><!--conteneur1-->
 
+		<div class="Conteneur2">
+			<div class="block1">
+				<p class="T3">Voir l'emploi du temps pour :</p>
+				<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+					<div class="form-group">
+					  <!-- <label class="T4" for="annee">Select list:</label> -->
+					  <select name="annee" class="form-control" id="annee">
+					    <option value="">-- Annee --</option>
+					  </select>
+					</div>
+					<div class="form-group">
+					  <!-- <label class="T4" for="groupe">Select list:</label> -->
+					  <select name="groupe" class="form-control" id="groupe">
+					    <option value="">-- Groupe --</option>
+					  </select>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+					<div class="form-group">
+					  <!-- <label class="T4" for="parcours">Select list:</label> -->
+					  <select name="parcours" class="form-control" id="parcours">
+					    <option value="">-- Parcours --</option>
+					  </select>
+					</div>
+					<div class="form-group">
+					  <!-- <label class="T4" for="option">Select list:</label> -->
+					  <select name="option" class="form-control" id="option">
+					    <option value="">-- Option --</option>
+					  </select>
+					</div>
+				</div>
+			</div> <!--block1-->
 
+			<div class="col-xs 5ths col-sm-5ths col-md-5ths col-lg-5ths">
+				<p class="day">Lundi</p>
+				<div class="task">
+					<p class="subject">Optimistation</p>
+					<p class="prof">Lafite</p>
+					<p class="salle">Ibn Sina</p>
+					<button type="button" class="btnAdd btn btn-default" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="task">
+					<p class="subject">Optimistation</p>
+					<p class="prof">Lafite</p>
+					<p class="salle">Ibn Sina</p>
+					<button type="button" class="btnAdd btn btn-default" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="task">
+					<p class="subject">Optimistation</p>
+					<p class="prof">Lafite</p>
+					<p class="salle">Ibn Sina</p>
+					<button type="button" class="btnAdd btn btn-default" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="task">
+					<p class="subject">Optimistation</p>
+					<p class="prof">Lafite</p>
+					<p class="salle">Ibn Sina</p>
+					<button type="button" class="btnAdd btn btn-default" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+					</button>
+				</div>
+			</div>
+			<div class="col-xs 5ths col-sm-5ths col-md-5ths col-lg-5ths">
+				<p class="day">Mardi</p>
+				<div class="task">
+					<p class="subject">Optimistation</p>
+					<p class="prof">Lafite</p>
+					<p class="salle">Ibn Sina</p>
+					<button type="button" class="btnAdd btn btn-default" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="task">
+					<p class="subject">Optimistation</p>
+					<p class="prof">Lafite</p>
+					<p class="salle">Ibn Sina</p>
+					<button type="button" class="btnAdd btn btn-default" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="task">
+					<p class="subject">Optimistation</p>
+					<p class="prof">Lafite</p>
+					<p class="salle">Ibn Sina</p>
+					<button type="button" class="btnAdd btn btn-default" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="task">
+					<p class="subject">Optimistation</p>
+					<p class="prof">Lafite</p>
+					<p class="salle">Ibn Sina</p>
+					<button type="button" class="btnAdd btn btn-default" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+					</button>
+				</div>
+			</div>
+			<div class="col-xs 5ths col-sm-5ths col-md-5ths col-lg-5ths">
+				<p class="day">Mercredi</p>
+				<div class="task">
+					<p class="subject">Optimistation</p>
+					<p class="prof">Lafite</p>
+					<p class="salle">Ibn Sina</p>
+					<button type="button" class="btnAdd btn btn-default" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="task">
+					<p class="subject">Optimistation</p>
+					<p class="prof">Lafite</p>
+					<p class="salle">Ibn Sina</p>
+					<button type="button" class="btnAdd btn btn-default" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="task">
+					<p class="subject">Optimistation</p>
+					<p class="prof">Lafite</p>
+					<p class="salle">Ibn Sina</p>
+					<button type="button" class="btnAdd btn btn-default" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="task">
+					<p class="subject">Optimistation</p>
+					<p class="prof">Lafite</p>
+					<p class="salle">Ibn Sina</p>
+					<button type="button" class="btnAdd btn btn-default" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+					</button>
+				</div>
+			</div>
+			<div class="col-xs 5ths col-sm-5ths col-md-5ths col-lg-5ths">
+				<p class="day">Jeudi</p>
+				<div class="task">
+					<p class="subject">Optimistation</p>
+					<p class="prof">Lafite</p>
+					<p class="salle">Ibn Sina</p>
+					<button type="button" class="btnAdd btn btn-default" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="task">
+					<p class="subject">Optimistation</p>
+					<p class="prof">Lafite</p>
+					<p class="salle">Ibn Sina</p>
+					<button type="button" class="btnAdd btn btn-default" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="task">
+					<p class="subject">Optimistation</p>
+					<p class="prof">Lafite</p>
+					<p class="salle">Ibn Sina</p>
+					<button type="button" class="btnAdd btn btn-default" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="task">
+					<p class="subject">Optimistation</p>
+					<p class="prof">Lafite</p>
+					<p class="salle">Ibn Sina</p>
+					<button type="button" class="btnAdd btn btn-default" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+					</button>
+				</div>
+			</div>
+			<div class="col-xs 5ths col-sm-5ths col-md-5ths col-lg-5ths">
+				<p class="day">Vendredi</p>
+				<div class="task">
+					<p class="subject">Optimistation</p>
+					<p class="prof">Lafite</p>
+					<p class="salle">Ibn Sina</p>
+					<button type="button" class="btnAdd btn btn-default" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="task">
+					<p class="subject">Optimistation</p>
+					<p class="prof">Lafite</p>
+					<p class="salle">Ibn Sina</p>
+					<button type="button" class="btnAdd btn btn-default" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="task">
+					<p class="subject">Optimistation</p>
+					<p class="prof">Lafite</p>
+					<p class="salle">Ibn Sina</p>
+					<button type="button" class="btnAdd btn btn-default" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+					</button>
+				</div>
+				<div class="task">
+					<p class="subject">Optimistation</p>
+					<p class="prof">Lafite</p>
+					<p class="salle">Ibn Sina</p>
+					<button type="button" class="btnAdd btn btn-default" aria-label="Left Align">
+					  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+					</button>
+				</div>
+			</div>
+		</div><!--conteneur2-->
 
-
-	<table class="tableau" >
-	  <tr class="ligne"> <th class="colonne">Lundi</th> <th class="colonne">Mardi</th> <th class="colonne">Mercredi</th> <th class="colonne">Jeudi</th> <th class="colonne">Vendredi</th> </tr>
-	<!-- début de la journée -->
-	<!-- de 8H à 10H -->
-	  <tr class="ligne">
-	  <!-- Lundi -->
-		<td class="colonne"> 
-		Matière : <br>
-		  <select name="matière">
-			<option value="1" >matière 1</option>
-			<option value="2" >matière 2</option>
-			<option value="3" >matière 3</option>
-			<option value="4" >matière 4</option>
-			<option value="5" >matière 5</option>
-		  </select>
-		  <br> Salle : <br>
-		  <select name="Salle">
-			<option value="boltzman" >boltzman</option>
-			<option value="ibn sina" >ibn sina</option>
-			<option value="poincaré" >poincaré</option>
-			<option value="archimède" >archiméde</option>
-			<option value="ibn rochd" >ibn rochd</option>
-		  </select>
-		</td>
-	  <!-- Mardi -->
-		<td class="colonne"> 
-		Matière : <br>
-		  <select name="matière">
-			<option value="1" >matière 1</option>
-			<option value="2" >matière 2</option>
-			<option value="3" >matière 3</option>
-			<option value="4" >matière 4</option>
-			<option value="5" >matière 5</option>
-		  </select>
-		  <br> Salle : <br>
-		  <select name="Salle">
-			<option value="boltzman" >boltzman</option>
-			<option value="ibn sina" >ibn sina</option>
-			<option value="poincaré" >poincaré</option>
-			<option value="archimède" >archiméde</option>
-			<option value="ibn rochd" >ibn rochd</option>
-		  </select>
-		</td>
-	  <!-- Mercredi -->
-		<td class="colonne"> 
-		Matière : <br>
-		  <select name="matière">
-			<option value="1" >matière 1</option>
-			<option value="2" >matière 2</option>
-			<option value="3" >matière 3</option>
-			<option value="4" >matière 4</option>
-			<option value="5" >matière 5</option>
-		  </select>
-		  <br> Salle : <br>
-		  <select name="Salle">
-			<option value="boltzman" >boltzman</option>
-			<option value="ibn sina" >ibn sina</option>
-			<option value="poincaré" >poincaré</option>
-			<option value="archimède" >archiméde</option>
-			<option value="ibn rochd" >ibn rochd</option>
-		  </select>
-		</td>
-	  <!-- Jeudi -->
-		<td class="colonne"> 
-		Matière : <br>
-		  <select name="matière">
-			<option value="1" >matière 1</option>
-			<option value="2" >matière 2</option>
-			<option value="3" >matière 3</option>
-			<option value="4" >matière 4</option>
-			<option value="5" >matière 5</option>
-		  </select>
-		  <br> Salle : <br>
-		  <select name="Salle">
-			<option value="boltzman" >boltzman</option>
-			<option value="ibn sina" >ibn sina</option>
-			<option value="poincaré" >poincaré</option>
-			<option value="archimède" >archiméde</option>
-			<option value="ibn rochd" >ibn rochd</option>
-		  </select>
-		</td>
-	  <!-- Vendredi -->
-		<td class="colonne"> 
-		Matière : <br>
-		  <select name="matière">
-			<option value="1" >matière 1</option>
-			<option value="2" >matière 2</option>
-			<option value="3" >matière 3</option>
-			<option value="4" >matière 4</option>
-			<option value="5" >matière 5</option>
-		  </select>
-		  <br> Salle : <br>
-		  <select name="Salle">
-			<option value="boltzman" >boltzman</option>
-			<option value="ibn sina" >ibn sina</option>
-			<option value="poincaré" >poincaré</option>
-			<option value="archimède" >archiméde</option>
-			<option value="ibn rochd" >ibn rochd</option>
-		  </select>
-		</td>
-	  </tr>
-
-
-	<!-- de 10H à 12H -->
-	  <tr class="ligne">
-	  <!-- Lundi -->
-		<td class="colonne"> 
-		Matière : <br>
-		  <select name="matière">
-			<option value="1" >matière 1</option>
-			<option value="2" >matière 2</option>
-			<option value="3" >matière 3</option>
-			<option value="4" >matière 4</option>
-			<option value="5" >matière 5</option>
-		  </select>
-		  <br> Salle : <br>
-		  <select name="Salle">
-			<option value="boltzman" >boltzman</option>
-			<option value="ibn sina" >ibn sina</option>
-			<option value="poincaré" >poincaré</option>
-			<option value="archimède" >archiméde</option>
-			<option value="ibn rochd" >ibn rochd</option>
-		  </select>
-		</td>
-	  <!-- Mardi -->
-		<td class="colonne"> 
-		Matière : <br>
-		  <select name="matière">
-			<option value="1" >matière 1</option>
-			<option value="2" >matière 2</option>
-			<option value="3" >matière 3</option>
-			<option value="4" >matière 4</option>
-			<option value="5" >matière 5</option>
-		  </select>
-		  <br> Salle : <br>
-		  <select name="Salle">
-			<option value="boltzman" >boltzman</option>
-			<option value="ibn sina" >ibn sina</option>
-			<option value="poincaré" >poincaré</option>
-			<option value="archimède" >archiméde</option>
-			<option value="ibn rochd" >ibn rochd</option>
-		  </select>
-		</td>
-	  <!-- Mercredi -->
-		<td class="colonne"> 
-		Matière : <br>
-		  <select name="matière">
-			<option value="1" >matière 1</option>
-			<option value="2" >matière 2</option>
-			<option value="3" >matière 3</option>
-			<option value="4" >matière 4</option>
-			<option value="5" >matière 5</option>
-		  </select>
-		  <br> Salle : <br>
-		  <select name="Salle">
-			<option value="boltzman" >boltzman</option>
-			<option value="ibn sina" >ibn sina</option>
-			<option value="poincaré" >poincaré</option>
-			<option value="archimède" >archiméde</option>
-			<option value="ibn rochd" >ibn rochd</option>
-		  </select>
-		</td>
-	  <!-- Jeudi -->
-		<td class="colonne"> 
-		Matière : <br>
-		  <select name="matière">
-			<option value="1" >matière 1</option>
-			<option value="2" >matière 2</option>
-			<option value="3" >matière 3</option>
-			<option value="4" >matière 4</option>
-			<option value="5" >matière 5</option>
-		  </select>
-		  <br> Salle : <br>
-		  <select name="Salle">
-			<option value="boltzman" >boltzman</option>
-			<option value="ibn sina" >ibn sina</option>
-			<option value="poincaré" >poincaré</option>
-			<option value="archimède" >archiméde</option>
-			<option value="ibn rochd" >ibn rochd</option>
-		  </select>
-		</td>
-	  <!-- Vendredi -->
-		<td class="colonne"> 
-		Matière : <br>
-		  <select name="matière">
-			<option value="1" >matière 1</option>
-			<option value="2" >matière 2</option>
-			<option value="3" >matière 3</option>
-			<option value="4" >matière 4</option>
-			<option value="5" >matière 5</option>
-		  </select>
-		  <br> Salle : <br>
-		  <select name="Salle">
-			<option value="boltzman" >boltzman</option>
-			<option value="ibn sina" >ibn sina</option>
-			<option value="poincaré" >poincaré</option>
-			<option value="archimède" >archiméde</option>
-			<option value="ibn rochd" >ibn rochd</option>
-		  </select>
-		</td>
-	  </tr>
-
-
-
-
-	<!-- Pause midi -->
-	  <tr class="ligne">
-	  <!-- Lundi -->
-		<td class="colonne"> Pause
-
-	  <!-- Mardi -->
-		<td class="colonne"> Pause
-	  <!-- Mercredi -->
-		<td class="colonne"> Pause
-	  <!-- Jeudi -->
-		<td class="colonne"> Pause
-	  <!-- Vendredi -->
-		<td class="colonne"> Pause
-
-	  </tr>
-
-
-	<!-- de 14H à 16H -->
-
-	  <tr class="ligne">
-	  <!-- Lundi -->
-		<td class="colonne"> 
-		Matière : <br>
-		  <select name="matière">
-			<option value="1" >matière 1</option>
-			<option value="2" >matière 2</option>
-			<option value="3" >matière 3</option>
-			<option value="4" >matière 4</option>
-			<option value="5" >matière 5</option>
-		  </select>
-		  <br> Salle : <br>
-		  <select name="Salle">
-			<option value="boltzman" >boltzman</option>
-			<option value="ibn sina" >ibn sina</option>
-			<option value="poincaré" >poincaré</option>
-			<option value="archimède" >archiméde</option>
-			<option value="ibn rochd" >ibn rochd</option>
-		  </select>
-		</td>
-	  <!-- Mardi -->
-		<td class="colonne"> 
-		Matière : <br>
-		  <select name="matière">
-			<option value="1" >matière 1</option>
-			<option value="2" >matière 2</option>
-			<option value="3" >matière 3</option>
-			<option value="4" >matière 4</option>
-			<option value="5" >matière 5</option>
-		  </select>
-		  <br> Salle : <br>
-		  <select name="Salle">
-			<option value="boltzman" >boltzman</option>
-			<option value="ibn sina" >ibn sina</option>
-			<option value="poincaré" >poincaré</option>
-			<option value="archimède" >archiméde</option>
-			<option value="ibn rochd" >ibn rochd</option>
-		  </select>
-		</td>
-	  <!-- Mercredi -->
-		<td class="colonne"> 
-		Matière : <br>
-		  <select name="matière">
-			<option value="1" >matière 1</option>
-			<option value="2" >matière 2</option>
-			<option value="3" >matière 3</option>
-			<option value="4" >matière 4</option>
-			<option value="5" >matière 5</option>
-		  </select>
-		  <br> Salle : <br>
-		  <select name="Salle">
-			<option value="boltzman" >boltzman</option>
-			<option value="ibn sina" >ibn sina</option>
-			<option value="poincaré" >poincaré</option>
-			<option value="archimède" >archiméde</option>
-			<option value="ibn rochd" >ibn rochd</option>
-		  </select>
-		</td>
-	  <!-- Jeudi -->
-		<td class="colonne"> 
-		Matière : <br>
-		  <select name="matière">
-			<option value="1" >matière 1</option>
-			<option value="2" >matière 2</option>
-			<option value="3" >matière 3</option>
-			<option value="4" >matière 4</option>
-			<option value="5" >matière 5</option>
-		  </select>
-		  <br> Salle : <br>
-		  <select name="Salle">
-			<option value="boltzman" >boltzman</option>
-			<option value="ibn sina" >ibn sina</option>
-			<option value="poincaré" >poincaré</option>
-			<option value="archimède" >archiméde</option>
-			<option value="ibn rochd" >ibn rochd</option>
-		  </select>
-		</td>
-	  <!-- Vendredi -->
-		<td class="colonne"> 
-		Matière : <br>
-		  <select name="matière">
-			<option value="1" >matière 1</option>
-			<option value="2" >matière 2</option>
-			<option value="3" >matière 3</option>
-			<option value="4" >matière 4</option>
-			<option value="5" >matière 5</option>
-		  </select>
-		  <br> Salle : <br>
-		  <select name="Salle">
-			<option value="boltzman" >boltzman</option>
-			<option value="ibn sina" >ibn sina</option>
-			<option value="poincaré" >poincaré</option>
-			<option value="archimède" >archiméde</option>
-			<option value="ibn rochd" >ibn rochd</option>
-		  </select>
-		</td>
-	  </tr>
-	<!-- de 16H à 18H -->
-
-	  <tr class="ligne">
-	  <!-- Lundi -->
-		<td class="colonne"> 
-		Matière : <br>
-		  <select name="matière">
-			<option value="1" >matière 1</option>
-			<option value="2" >matière 2</option>
-			<option value="3" >matière 3</option>
-			<option value="4" >matière 4</option>
-			<option value="5" >matière 5</option>
-		  </select>
-		  <br> Salle : <br>
-		  <select name="Salle">
-			<option value="boltzman" >boltzman</option>
-			<option value="ibn sina" >ibn sina</option>
-			<option value="poincaré" >poincaré</option>
-			<option value="archimède" >archiméde</option>
-			<option value="ibn rochd" >ibn rochd</option>
-		  </select>
-		</td>
-	  <!-- Mardi -->
-		<td class="colonne"> 
-		Matière : <br>
-		  <select name="matière">
-			<option value="1" >matière 1</option>
-			<option value="2" >matière 2</option>
-			<option value="3" >matière 3</option>
-			<option value="4" >matière 4</option>
-			<option value="5" >matière 5</option>
-		  </select>
-		  <br> Salle : <br>
-		  <select name="Salle">
-			<option value="boltzman" >boltzman</option>
-			<option value="ibn sina" >ibn sina</option>
-			<option value="poincaré" >poincaré</option>
-			<option value="archimède" >archiméde</option>
-			<option value="ibn rochd" >ibn rochd</option>
-		  </select>
-		</td>
-	  <!-- Mercredi -->
-		<td class="colonne"> 
-		Matière : <br>
-		  <select name="matière">
-			<option value="1" >matière 1</option>
-			<option value="2" >matière 2</option>
-			<option value="3" >matière 3</option>
-			<option value="4" >matière 4</option>
-			<option value="5" >matière 5</option>
-		  </select>
-		  <br> Salle : <br>
-		  <select name="Salle">
-			<option value="boltzman" >boltzman</option>
-			<option value="ibn sina" >ibn sina</option>
-			<option value="poincaré" >poincaré</option>
-			<option value="archimède" >archiméde</option>
-			<option value="ibn rochd" >ibn rochd</option>
-		  </select>
-		</td>
-	  <!-- Jeudi -->
-		<td class="colonne"> 
-		Matière : <br>
-		  <select name="matière">
-			<option value="1" >matière 1</option>
-			<option value="2" >matière 2</option>
-			<option value="3" >matière 3</option>
-			<option value="4" >matière 4</option>
-			<option value="5" >matière 5</option>
-		  </select>
-		  <br> Salle : <br>
-		  <select name="Salle">
-			<option value="boltzman" >boltzman</option>
-			<option value="ibn sina" >ibn sina</option>
-			<option value="poincaré" >poincaré</option>
-			<option value="archimède" >archiméde</option>
-			<option value="ibn rochd" >ibn rochd</option>
-		  </select>
-		</td>
-	  <!-- Vendredi -->
-		<td class="colonne"> 
-		Matière : <br>
-		  <select name="matière">
-			<option value="1" >matière 1</option>
-			<option value="2" >matière 2</option>
-			<option value="3" >matière 3</option>
-			<option value="4" >matière 4</option>
-			<option value="5" >matière 5</option>
-		  </select>
-		  <br> Salle : <br>
-		  <select name="Salle">
-			<option value="boltzman" >boltzman</option>
-			<option value="ibn sina" >ibn sina</option>
-			<option value="poincaré" >poincaré</option>
-			<option value="archimède" >archiméde</option>
-			<option value="ibn rochd" >ibn rochd</option>
-		  </select>
-		</td>
-	  </tr>
-
-
-
-	<!-- Fin de la journée -->
-
-	</table>
-
-	<br>
-	<input type="submit" value="Valider">
-</div><!--conteneur2-->
-
-</form>
-
-      <script src="js/jquery-3.1.1.min"></script>
-      <script src="js/main.js"></script>
-      <script src="dist/js/bootstrap.min.js"></script>
-
-
- </body>
+    	<script src="js/jquery-3.1.1.min.js"></script>
+    	<!-- // <script src="js/main.js"></script> -->
+    	<script src="dist/js/bootstrap.min.js"></script>
+	 </body>
 </html>
