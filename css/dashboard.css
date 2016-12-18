@@ -1,27 +1,52 @@
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body {
+	font-family: Ubuntu;
+}
+
 .conteneur1
 {
 	width : 700px;
-	height : 140px;
+	/*height : 140px;*/
 	margin : auto;
 	margin-top: 10px;
+	margin-bottom: 10px;
 }
+
+.dash-box {
+	/*border: 1px solid #e3e3e3;*/
+	/*border-radius: 4px;*/
+	/*padding: 5px;*/
+	/*height : 140px;*/
+	/*margin: 0px 10px;*/
+}
+
+.R1, .R2, .R3 {
+	border-radius: 4px;
+}
+
 .R1
 {
-	float : left;
-	width : 30%;
-	height : 140px;
+	/*float : left;*/
 	background-color : #C0C0C0;
-	border: 1px ;
-	border-bottom-right-radius: 0.75em;
-	border-bottom-left-radius: 0.75em;
-	border-top-right-radius: 0.75em;
-	border-top-left-radius: 0.75em;
+}
+.R3
+{
+	/*display: inline-block;*/
+	/*float : right;*/
+	background-color : #00bbd4;
+}
+.R2
+{
+	background-color : #8bc24a;
+	/*display: inline-block;*/
+	/*margin-top:0;*/
 }
 .T1
 {
 	color : #FFFFFF;
 	font-weight : bold;
-	font-family : Calibri;
 	font-size: 25px;
 	padding-left: 4px;
 	padding-top: 2px;
@@ -31,7 +56,6 @@
 {
 	color : #FFFFFF;
 	padding-left: 70%;
-	font-family : Calibri;
 	font-size: 11px;	
 }
 .Info2 
@@ -43,36 +67,8 @@
 }
 .Info1{
 	padding-left: 2%;
-	font-family : Calibri;
 	font-size: 18px;	
 	color: #FFFFFF;
-}
-.R3
-{
-	display: inline-block;
-	float : right;
-	width : 30%;
-	height : 140px;
-	background-color : #00bbd4;
-	border: 1px ;
-	border-bottom-right-radius: 0.75em;
-	border-bottom-left-radius: 0.75em;
-	border-top-right-radius: 0.75em;
-	border-top-left-radius: 0.75em;
-}
-.R2
-{
-	width : 30%;
-	height : 140px;
-	background-color : #8bc24a;
-	border: 1px ;
-	border-bottom-right-radius: 0.75em;
-	border-bottom-left-radius: 0.75em;
-	border-top-right-radius: 0.75em;
-	border-top-left-radius: 0.75em;
-	display: inline-block;
-	margin-left:5%;
-	margin-top:0;
 }
 .Conteneur2 
 {
@@ -81,37 +77,109 @@
 	width : 700px;
 	border: 1px solid;
 	margin : auto;
+	overflow: hidden;
 
 }
 .block1{
-	padding-left: 10px;
+	/*padding-left: 5px;*/
 }
 .T3{
-	font-family : Calibri;
 	font-size: 20px;
+	padding-left: 15px;
 }
 .T4
 {
-	font-family: Calibri;
 	font-weight: bold;
 	font-size:18px;
 }
-.b1{
-	margin-left:5%;
-	float:left;	
+.day {
+	letter-spacing: 5px;
+	font-variant: small-caps;
+	margin: auto;
+	text-align: center;
 }
-.b2{
-	margin-left:50%;
-}
-.tableau{
-	border: 3px white solid;
-	width: 700px;
-	margin : auto;
-}
-.ligne{
-	border:3px white solid ;
-	}
-.colonne{
+.task{
 	background-color:#8bc24a;
-	border:3px white solid;
+	border:1px white solid;
+	padding: 5px;
+	padding-bottom: 1px;
+	overflow: hidden;
+	margin-bottom: 7px;
+	color: white;
+	font-size: 120%;
+	font-weight: bold;
+}
+.task * {
+	margin: 2px 0px;
+}
+.task .subject {
+	display: block;
+}
+
+.task .prof {
+	display: block;
+}
+
+.task .salle {
+	float: right;
+	display: block;
+	margin-bottom: 0px;
+}
+
+.task .btnAdd {
+	display: none;
+	border-radius: 3px;
+	border: none;
+	background-color: red;
+	color: white;
+	font-size: 60%;
+	text-align: center;
+	font-weight: normal;
+	float: left;
+}
+.btn.btnAdd {
+	padding: 1px 3px;
+}
+
+.task:hover .btnAdd {
+	display: block;
+	cursor: pointer;
+}
+
+
+
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.col-xs-5ths {
+    width: 20%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .col-sm-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-5ths {
+        width: 20%;
+        float: left;
+    }
 }
