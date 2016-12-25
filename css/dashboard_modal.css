@@ -5,6 +5,10 @@ body {
 	font-family: Ubuntu;
 }
 
+.hide {
+	display: none!important;
+}
+
 .conteneur1
 {
 	width : 700px;

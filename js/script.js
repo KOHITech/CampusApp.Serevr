@@ -3,9 +3,6 @@ $(document).ready(function() {
     var $groupe = $('#groupe');
     var $parcours = $('#parcours');
     var $option = $('#option');
-    var $metier = $('#metier');
-    var $electif = $('#electif');
-    alert("Welcome to Kohi Web Site")
 
     // definition des fonction
     function chargement(nomtable,jqvar){
@@ -46,24 +43,17 @@ $(document).ready(function() {
     }
 
     function hideAll() {
-        $parcours.addClass("hide");
-        $parcours.prev().addClass("hide");
-        $groupe.addClass("hide");
-        $groupe.prev().addClass("hide");
-        $option.addClass("hide");
-        $option.prev().addClass("hide");
-        $metier.addClass("hide");
-        $metier.prev().addClass("hide");
-        $electif.addClass("hide");
-        $electif.prev().addClass("hide");
+        $parcours.parent().parent().addClass("hide");
+        $groupe.parent().parent().addClass("hide");
+        $option.parent().parent().addClass("hide");
     }
 // fin definition des fonction
 //
 //
-    $annee.prev().toggleClass("hide");
-    $annee.toggleClass("hide");
+    // $annee.toggleClass("hide");
     // chargement des annee
-    chargement("year",$annee);
+    // hideAll();
+    chargement("year", $annee);
     // à la sélection de l'année dans la liste
     $annee.on('change', function() {
         hideAll(); 
@@ -72,70 +62,35 @@ $(document).ready(function() {
         if(val == '1A') {
             $groupe.empty(); // on vide la liste des groupes
 
-            chargement_loop("groupe",$groupe,1);
+            chargement_loop("groupe", $groupe, "1");
 
-            $groupe.prev().toggleClass("hide");
-            $groupe.toggleClass("hide");
+            $groupe.parent().parent().toggleClass("hide");
         }
 
        if(val == '2A') {
+            hideAll(); 
             $parcours.empty(); // on vide la liste des parcours
 
             chargement("parcours",$parcours)
 
-            $parcours.prev().toggleClass("hide");
-            $parcours.toggleClass("hide");
+            $parcours.parent().parent().toggleClass("hide");
 
             $parcours.on("change", function(){
-                $groupe.addClass("hide");
-                $groupe.prev().addClass("hide");
-                $electif.addClass("hide");
-                $electif.prev().addClass("hide");                
+                $groupe.parent().parent().addClass("hide");
                 var vall = $(this).val();
                 //
                 $groupe.empty();
-                if (vall=='TC') {
-                    $groupe.empty(); // on vide la liste des groupes
-
-                    chargement_loop("groupe",$groupe,2)
-
-                    $groupe.prev().toggleClass("hide");
-                    $groupe.toggleClass("hide");
-
-                    $electif.empty(); // on vide la liste des electifs
-
-                    chargement("electif",$electif)
-
-                    $electif.prev().toggleClass("hide");
-                    $electif.toggleClass("hide");
-                }
-
-                else {
-                    $groupe.addClass("hide");
-                    $groupe.prev().addClass("hide");
-                    $electif.addClass("hide");
-                    $electif.prev().addClass("hide"); 
-                    // cette ligne est un test
-                    $groupe.empty();
-                    $electif.empty();
-                }
+                chargement_loop("groupe", $groupe, 2)
+                $groupe.parent().parent().toggleClass("hide");
             })
         }
 
        if(val == '3A') {
             $option.empty(); // on vide la liste des options 
 
-            chargement("branch",$option)
+            chargement("branch", $option)
 
-            $option.prev().toggleClass("hide");
-            $option.toggleClass("hide");
-            $metier.empty(); // on vide la liste des options
-
-            chargement("job",$metier)
-
-            $metier.prev().toggleClass("hide");
-            $metier.toggleClass("hide");                                  
-        
+            $option.parent().parent().toggleClass("hide");        
         }
     });
 
