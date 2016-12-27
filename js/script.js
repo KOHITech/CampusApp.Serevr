@@ -74,15 +74,6 @@ $(document).ready(function() {
             chargement("parcours",$parcours)
 
             $parcours.parent().parent().toggleClass("hide");
-
-            $parcours.on("change", function(){
-                $groupe.parent().parent().addClass("hide");
-                var vall = $(this).val();
-                //
-                $groupe.empty();
-                chargement_loop("groupe", $groupe, 2)
-                $groupe.parent().parent().toggleClass("hide");
-            })
         }
 
        if(val == '3A') {
@@ -91,6 +82,17 @@ $(document).ready(function() {
             chargement("branch", $option)
 
             $option.parent().parent().toggleClass("hide");        
+        }
+    });
+
+    $parcours.on("change", function(){
+        $groupe.parent().parent().addClass("hide");
+        var vall = $(this).val();
+        //
+        if (vall) {
+            $groupe.empty();
+            chargement_loop("groupe", $groupe, 2)
+            $groupe.parent().parent().toggleClass("hide");
         }
     });
 

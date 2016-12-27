@@ -28,6 +28,7 @@ body {
 
 .conteneur1 .R1, .R2, .R3 {
 	border-radius: 4px;
+	padding: 5px 2px;
 }
 
 .conteneur1 .R1
@@ -51,23 +52,16 @@ body {
 {
 	color : #FFFFFF;
 	font-weight : bold;
-	font-size: 25px;
+	font-size: 115%;
 	padding-left: 4px;
 	padding-top: 2px;
 	
 }
-.conteneur1 .T2
-{
-	color : #FFFFFF;
-	padding-left: 70%;
-	font-size: 11px;	
-}
 .Info2 
 {
-	
 	color: #FFFFFF;
 	padding-left:70%;
-	
+	margin-bottom: 0px;	
 }
 .Info1{
 	padding-left: 2%;
@@ -102,7 +96,7 @@ body {
 	overflow: hidden;
 	margin-bottom: 7px;
 	color: white;
-	font-size: 120%;
+	font-size: 105%;
 	font-weight: bold;
 }
 .task * {
