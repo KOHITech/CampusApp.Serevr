@@ -1,2 +1,0 @@
-glyphicon glyphicon-arrow-up
-glyphicon glyphicon-arrow-down

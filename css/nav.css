@@ -1,0 +1,40 @@
+.navbar{
+	background-color: #01a885;
+}
+.navbar-brand {
+	margin: 0px;
+	padding: 5px 0px;
+	background-color: white;
+	height: 80px;
+}
+.navbar-brand img {
+	height: 70px;
+}
+.b1{
+	background-color: #efffef;
+	/*width : 130px;*/
+	height : 40px;
+    /*border-radius: 8px;*/
+	float : right;
+	margin-top:20px;
+	margin-right:5px;
+	/*font-family : Calibri;*/
+	/*font-size: 18px;*/
+	text-align: center;
+}
+
+.nav {
+	margin-top: 30px;
+	margin-left: 10px;
+}
+
+.navbar-right li {
+	color: #fff;
+}
+
+.nav li a {
+	background-color: #efffef!important;
+	color: #000;
+}
+
+

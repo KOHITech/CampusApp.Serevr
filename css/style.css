@@ -1,0 +1,223 @@
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body {
+	font-family: Ubuntu;
+}
+
+.hide {
+	display: none!important;
+}
+
+.conteneur1
+{
+	width : 700px;
+	/*height : 140px;*/
+	margin : auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.dash-box {
+	/*border: 1px solid #e3e3e3;*/
+	/*border-radius: 4px;*/
+	/*padding: 5px;*/
+	/*height : 140px;*/
+	/*margin: 0px 10px;*/
+}
+
+.conteneur1 .R1, .R2, .R3 {
+	border-radius: 4px;
+	padding: 5px 2px;
+}
+
+.conteneur1 .R1
+{
+	/*float : left;*/
+	background-color : #C0C0C0;
+}
+.conteneur1 .R3
+{
+	/*display: inline-block;*/
+	/*float : right;*/
+	background-color : #00bbd4;
+}
+.conteneur1 .R2
+{
+	background-color : #8bc24a;
+	/*display: inline-block;*/
+	/*margin-top:0;*/
+}
+.conteneur1 .T1
+{
+	color : #FFFFFF;
+	font-weight : bold;
+	font-size: 115%;
+	padding-left: 4px;
+	padding-top: 2px;
+	
+}
+.Info2 
+{
+	color: #FFFFFF;
+	padding-left:70%;
+	margin-bottom: 0px;	
+}
+.Info1{
+	padding-left: 2%;
+	font-size: 18px;	
+	color: #FFFFFF;
+}
+.Conteneur2 
+{
+	background-color: #FFFFFF;
+	padding-top: 5px;
+	width : 700px;
+	border: 1px solid;
+	margin : auto;
+	overflow: hidden;
+
+}
+.Conteneur2 .T3{
+	font-size: 20px;
+	padding-left: 15px;
+}
+.day {
+	letter-spacing: 5px;
+	font-variant: small-caps;
+	margin: auto;
+	text-align: center;
+}
+.task{
+	background-color:#8bc24a;
+	border:1px white solid;
+	padding: 5px;
+	padding-bottom: 1px;
+	overflow: hidden;
+	margin-bottom: 7px;
+	color: white;
+	font-size: 105%;
+	font-weight: bold;
+}
+.task * {
+	margin: 2px 0px;
+}
+.task .subject {
+	display: block;
+}
+
+.task .prof {
+	display: block;
+}
+
+.task .salle {
+	float: right;
+	display: block;
+	margin-bottom: 0px;
+}
+
+.task .btnAdd {
+	display: none;
+	border-radius: 3px;
+	border: none;
+	background-color: red;
+	color: white;
+	font-size: 60%;
+	text-align: center;
+	font-weight: normal;
+	float: left;
+}
+.btn.btnAdd {
+	padding: 1px 3px;
+}
+
+.task:hover .btnAdd {
+	display: block;
+	cursor: pointer;
+}
+
+
+
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+    position: relative;
+    min-height: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.col-xs-5ths {
+    width: 20%;
+    float: left;
+}
+
+@media (min-width: 768px) {
+    .col-sm-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-lg-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+#myModal .block1{
+	width: 700px;
+	margin:auto;
+}
+#myModal .R1{
+	width:30%;
+	float:left;
+	}
+#myModal .R2{
+	display: inline-block;
+	width:30%;
+	margin-left:5%;	
+	}
+#myModal .R3{
+	display: inline-block;
+	width:30%;
+	float:right;
+	}
+#myModal .block2{
+	padding-top : 15px;
+	width: 700px;
+	margin:auto;
+}
+#myModal .Dropdown{
+	
+	float:left;
+	background-color: #dff0d8;	
+}
+#myModal .T1{
+	font-weight: bold;
+}
+#myModal .panel-title{
+	font-weight: bold;
+	font-size : 15px;
+
+}
+#myModal .panel-heading{
+	color : #3c763d!important;
+	background-color:#dff0d8!important;
+	border-color:#d6e9c6!important;
+}
+#myModal .panel-body label{
+	display: block;
+}
+
+#myModal .modal-dialog {
+	width: 800px;
+}

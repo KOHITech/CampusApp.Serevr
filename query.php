@@ -27,9 +27,13 @@
 			}
 			if (isset($_GET["where"])) {
 				$where = $_GET["where"];
-				$where = explode("~", $where);
-				if ( ! is_numeric($where[1])) {
-					$where[1] = '"' . $where[1] . '"';
+				$where = explode(";", $where);
+				$where[0] = explode(",", $where[0]);
+				$where[1] = explode(",", $where[1]);
+				for ($i=0; $i < count($where[1]); $i++) { 
+					if ( ! is_numeric($where[1][$i])) {
+						$where[1][$i] = '"' . $where[1][$i] . '"';
+					}
 				}
 				$table = $linker->select($tablename, $columns, $where[0], $where[1]);
 			} else {

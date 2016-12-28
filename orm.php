@@ -118,14 +118,19 @@
 			mysqli_close($this->connection);
 		}
 
-		public function select($tablename, $columns, $column = null, $value = null) {
+		public function select($tablename, $columns, $wcolumns = null, $wvalues = null) {
 			$this->connect();
 
 			$sql = "SELECT %s FROM `%s`";
-			$where_clause = "WHERE `%s` = %s";
+			$where_clause = "WHERE ";
 
-			if ($column && $value) {
-				$where_clause = sprintf($where_clause, $column, $value);
+			if ($wcolumns && $wvalues) {
+				$equ = "`%s` = %s";
+				$arr = [];
+				for ($i=0; $i < count($wcolumns); $i++) { 
+					array_push($arr, sprintf($equ, $wcolumns[$i], $wvalues[$i]));
+				}
+				$where_clause = $where_clause . join(" AND ", $arr);
 				$sql =  $sql . " " . $where_clause;
 			}
 

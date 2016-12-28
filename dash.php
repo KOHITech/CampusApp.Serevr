@@ -1,0 +1,348 @@
+
+<div class="conteneur1">
+  <div class="col-md-4 col-lg-4 col-sm-6 col-xs-6 dash-box">
+    <div class="R1">
+      <p class="T1">Élèves inscrits</p>
+      <p class="Info1">Info1</p>
+      <p class="Info2"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>info2</p>
+    </div><!--R1-->
+  </div>
+
+  
+  
+  <div class="col-md-4 col-lg-4 col-sm-6 col-xs-6 dash-box">
+    <div class="R3">
+        <p class="T1">Tâches planifiées</p>
+        <p class="Info1">Info5</p>
+        <p class="Info2"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>info4</p>
+    </div>
+  </div><!--R3-->
+  
+  <div class="col-md-4 col-lg-4 col-sm-6 col-xs-6 dash-box">
+    <div class="R2">
+        <p class="T1">Projets actifs</p>
+        <p class="Info1">Info3</p>
+        <p class="Info2"><span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>info4</p>
+    </div>
+  </div><!--R2-->
+  
+  <div style="clear: both; float: none; height: 0;"></div>
+  
+</div><!--conteneur1-->
+
+<div class="Conteneur2">
+  <div class="col-md-12 col-xs-12 col-sm-12 col-lg-12">
+    <div class="block1">
+      <p class="T3">Voir l'emploi du temps pour :</p>
+      <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+        <div class="form-group">
+          <select name="annee" class="form-control" id="annee">
+            <option value="">-- Annee --</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+          <div class="form-group">
+          <select name="groupe" class="form-control" id="groupe">
+            <option value="">-- Groupe --</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+        <div class="form-group">
+          <select name="parcours" class="form-control" id="parcours">
+            <option value="">-- Parcours --</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+        <div class="form-group">
+          <select name="option" class="form-control" id="option">
+            <option value="">-- Option --</option>
+          </select>
+        </div>
+      </div>
+    </div> <!--block1-->
+  </div>
+  <div class="col-xs 5ths col-sm-5ths col-md-5ths col-lg-5ths">
+    <p class="day">Lundi</p>
+    <div class="task">
+      <p class="subject">Optimistation</p>
+      <p class="prof">Lafite</p>
+      <p class="salle">Ibn Sina</p>
+      <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="task">
+      <p class="subject">Optimistation</p>
+      <p class="prof">Lafite</p>
+      <p class="salle">Ibn Sina</p>
+      <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="task">
+      <p class="subject">Optimistation</p>
+      <p class="prof">Lafite</p>
+      <p class="salle">Ibn Sina</p>
+      <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="task">
+      <p class="subject">Optimistation</p>
+      <p class="prof">Lafite</p>
+      <p class="salle">Ibn Sina</p>
+      <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+  <div class="col-xs 5ths col-sm-5ths col-md-5ths col-lg-5ths">
+    <p class="day">Mardi</p>
+    <div class="task">
+      <p class="subject">Optimistation</p>
+      <p class="prof">Lafite</p>
+      <p class="salle">Ibn Sina</p>
+      <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="task">
+      <p class="subject">Optimistation</p>
+      <p class="prof">Lafite</p>
+      <p class="salle">Ibn Sina</p>
+      <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="task">
+      <p class="subject">Optimistation</p>
+      <p class="prof">Lafite</p>
+      <p class="salle">Ibn Sina</p>
+      <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="task">
+      <p class="subject">Optimistation</p>
+      <p class="prof">Lafite</p>
+      <p class="salle">Ibn Sina</p>
+      <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+  <div class="col-xs 5ths col-sm-5ths col-md-5ths col-lg-5ths">
+    <p class="day">Mercredi</p>
+    <div class="task">
+      <p class="subject">Optimistation</p>
+      <p class="prof">Lafite</p>
+      <p class="salle">Ibn Sina</p>
+      <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="task">
+      <p class="subject">Optimistation</p>
+      <p class="prof">Lafite</p>
+      <p class="salle">Ibn Sina</p>
+      <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="task">
+      <p class="subject">Optimistation</p>
+      <p class="prof">Lafite</p>
+      <p class="salle">Ibn Sina</p>
+      <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="task">
+      <p class="subject">Optimistation</p>
+      <p class="prof">Lafite</p>
+      <p class="salle">Ibn Sina</p>
+      <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+  <div class="col-xs 5ths col-sm-5ths col-md-5ths col-lg-5ths">
+    <p class="day">Jeudi</p>
+    <div class="task">
+      <p class="subject">Optimistation</p>
+      <p class="prof">Lafite</p>
+      <p class="salle">Ibn Sina</p>
+      <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="task">
+      <p class="subject">Optimistation</p>
+      <p class="prof">Lafite</p>
+      <p class="salle">Ibn Sina</p>
+      <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="task">
+      <p class="subject">Optimistation</p>
+      <p class="prof">Lafite</p>
+      <p class="salle">Ibn Sina</p>
+      <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="task">
+      <p class="subject">Optimistation</p>
+      <p class="prof">Lafite</p>
+      <p class="salle">Ibn Sina</p>
+      <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+  <div class="col-xs 5ths col-sm-5ths col-md-5ths col-lg-5ths">
+    <p class="day">Vendredi</p>
+    <div class="task">
+      <p class="subject">Optimistation</p>
+      <p class="prof">Lafite</p>
+      <p class="salle">Ibn Sina</p>
+      <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="task">
+      <p class="subject">Optimistation</p>
+      <p class="prof">Lafite</p>
+      <p class="salle">Ibn Sina</p>
+      <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="task">
+      <p class="subject">Optimistation</p>
+      <p class="prof">Lafite</p>
+      <p class="salle">Ibn Sina</p>
+      <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      </button>
+    </div>
+    <div class="task">
+      <p class="subject">Optimistation</p>
+      <p class="prof">Lafite</p>
+      <p class="salle">Ibn Sina</p>
+      <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</div><!--conteneur2-->
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Add a task</h4>
+      </div>
+      <div class="modal-body">
+        <div class="block1">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title"><p class="T1">Informations générales</p></h3>
+            </div>
+            <div class="panel-body">
+              <div class="R1">
+                <p class="T2">Nom de la matière/du créneau</p>
+                <input class="I1" type="text" name="matière">
+              </div>
+              
+              <div class="R2">
+                <p class="T3">Nom de l'encadrant</p>
+                <input class="I2" type="text" name="encadrant">
+              </div>
+              
+              <div class="R3">
+                <p class="T4">Salle</p>
+                <input class="I3" type="text" name="salle">
+              </div>
+            </div>
+          </div>
+        </div><!--block1--> 
+        
+        <div class="block2">
+          <div class="R1">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+              <h3 class="panel-title">
+                <label><input type="checkbox" name="choix1" value="1" class="C1">Elève Première Année</label>
+              </h3>
+              </div>
+              <div class="panel-body">
+              <label><input type="checkbox" name="choix2" value="1" class="C2">Groupe 1</label>
+              <label><input type="checkbox" name="choix2" value="2" class="C2">Groupe 2</label>
+              <label><input type="checkbox" name="choix2" value="3" class="C2">Groupe 3</label>
+              <label><input type="checkbox" name="choix2" value="4" class="C2">Groupe 4</label>
+              <label><input type="checkbox" name="choix2" value="5" class="C2">Groupe 5</label>
+              <label><input type="checkbox" name="choix2" value="6" class="C2">Groupe 6</label>
+              <label><input type="checkbox" name="choix2" value="7" class="C2">Groupe 7</label>
+              <label><input type="checkbox" name="choix2" value="8" class="C2">Groupe 8</label>
+              </div>
+            </div>  
+          </div>  
+          <div class="R2">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+              <h3 class="panel-title">
+                <label><input type="checkbox" name="choix1" value="1" class="C1">Elève Deuxième Année</label>
+              </h3>
+              </div>
+              <div class="panel-body">
+              <label><input type="checkbox" name="choix3" value="1" class="C2">Groupe 1</label>
+              <label><input type="checkbox" name="choix3" value="2" class="C2">Groupe 2</label>
+              <label><input type="checkbox" name="choix3" value="3" class="C2">Groupe 3</label>
+              <label><input type="checkbox" name="choix3" value="4" class="C2">Groupe 4</label>
+              <label><input type="checkbox" name="choix3" value="5" class="C2">Groupe 5</label>
+              <label><input type="checkbox" name="choix3" value="6" class="C2">Electif </label>
+              <label><input type="checkbox" name="choix3" value="7" class="C2">ISC </label>
+              <label><input type="checkbox" name="choix3" value="8" class="C2">BOA </label>
+              </div>
+            </div>
+          </div>
+          <div class="R3">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title" >
+                  <label><input type="checkbox" name="choix1" value="1" class="C1">Elève Troisième Année</label>
+                </h3>
+              </div>
+                
+              <div class="panel-body">
+                <label><input type="checkbox" name="choix3" value="1" class="C2">Groupe 1</label>
+                <label><input type="checkbox" name="choix3" value="2" class="C2">Groupe 2</label>
+                <label><input type="checkbox" name="choix3" value="3" class="C2">Groupe 3</label>
+                <label><input type="checkbox" name="choix3" value="4" class="C2">Electif</label>
+                <label><input type="checkbox" name="choix3" value="5" class="C2">Energie</label>
+                <label><input type="checkbox" name="choix3" value="6" class="C2">Génie Industriel</label>
+                <label><input type="checkbox" name="choix3" value="7" class="C2">Manager </label>
+                <label><input type="checkbox" name="choix3" value="8" class="C2">Entrepreneur </label>
+              </div>
+            </div>
+          </div> 
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Add</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="js/script.js"></script>
