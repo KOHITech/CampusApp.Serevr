@@ -1,0 +1,28 @@
+body {
+	font-family: Ubuntu;
+	background-color: #efefef;	
+}
+
+.container img {
+	width: 400px;
+	height: 400px;
+	margin: auto;
+	display: block;
+}
+
+.brand-name, .team {
+	text-align: center;
+}
+
+.brand-name {
+	font-size: 45px;
+	font-variant: small-caps;
+}
+
+
+.hline {
+	width: 45%;
+	border-bottom: 2px solid #aaa;
+	margin: 10px auto 5px;
+
+}

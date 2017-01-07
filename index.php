@@ -3,13 +3,25 @@
 	$connected = false;
 	$method = "nothing";
 
+	$page = "dash";
+
+	if(isset($_GET["page"])) {
+		$page = $_GET["page"];
+	}
+
+	if(isset($_GET["method"])) {
+		$method = $_GET["method"];
+	}
+
+	if ($method == "signout") {
+		session_destroy();
+		header("Location: .");
+	}
+
 	if(isset($_SESSION["email"])) {
 		$email = $_SESSION['email'];
 		$connected = true;
 	} else {
-		if(isset($_GET["method"])) {
-			$method = $_GET["method"];
-		}
 		if($method == "login") {
 			if(isset($_POST["email"]) && isset($_POST["password"])) {
 				$email = $_POST["email"];
@@ -21,7 +33,7 @@
 				$rslt = $table->get_json();
 				if($rslt != "") {
 					$_SESSION["email"] = $email;
-					header("Location: .");
+					header("Location: ./?page=dash");
 				}
 			}
 		}
@@ -57,6 +69,13 @@
 		<?php
 			}
 		?>
+		<?php 
+			if (!($method == 'login' && $connected)) {
+		?>
+			<link href="css/welcome.css" rel="stylesheet">
+		<?php
+			}
+		?>
 		<script src="js/jquery-3.1.1.min.js"></script>
 	    <script src="dist/js/bootstrap.min.js"></script>
 	</head>
@@ -64,13 +83,23 @@
 		<?php 
 			require('nav.php');
 			if($connected) {
-				require('dash.php');
+				switch ($page) {
+					case 'dash':
+						require 'dashboard.php';
+						break;
+
+					case 'schedule':
+						require 'schedule.php';
+						break;
+
+					default:
+						require 'schedule.php';
+						break;
+				}
 			} elseif ($method == "login") {
 				require('signIn.php');
 			} else {
-		?>
-			Welcome
-		<?php
+				require('welcome.php');
 			}
 		?>
 

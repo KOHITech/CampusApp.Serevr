@@ -16,6 +16,10 @@ body {
 	margin : auto;
 	margin-top: 10px;
 	margin-bottom: 10px;
+	border: solid 1px #999;
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 5px;
 }
 
 .dash-box {
@@ -73,7 +77,8 @@ body {
 	background-color: #FFFFFF;
 	padding-top: 5px;
 	width : 700px;
-	border: 1px solid;
+	border: 1px solid #999;
+	border-radius: 5px;
 	margin : auto;
 	overflow: hidden;
 
@@ -216,6 +221,11 @@ body {
 }
 #myModal .panel-body label{
 	display: block;
+}
+
+#myModal .block1 .checkbox {
+	clear: both;
+	font-weight: bold;
 }
 
 #myModal .modal-dialog {

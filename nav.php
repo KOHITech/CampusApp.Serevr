@@ -12,11 +12,13 @@
     	} else {
     ?>
 		<div id="navbar" class="navbar-collapse collapse">
-			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Dashboard</a></li>
+			<ul class="nav navbar-nav navbar-left">
+                <li <?php if($page=="schedule") echo 'class="active"'; ?>><a href="?page=schedule">Schedule</a></li>
+				<li <?php if($page=="dash") echo 'class="active"'; ?>><a href="?page=dash">Dashboard</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li>Bureau des élèves</li>
+        <li>-<a href="?method=signout">sign out</a>-</li>
 			</ul>
 		</div>
     <?php

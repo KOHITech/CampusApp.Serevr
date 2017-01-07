@@ -7,6 +7,9 @@
 	background-color: white;
 	height: 80px;
 }
+.navbar-brand:hover, .navbar-brand:focus {
+	background-color: #fff!important;	
+}
 .navbar-brand img {
 	height: 70px;
 }
@@ -30,9 +33,37 @@
 
 .navbar-right li {
 	color: #fff;
+	padding-right: 8px;
 }
 
-.nav li a {
+.navbar-default .navbar-nav.navbar-right > li > a {
+	position: inherit;
+	padding: 0px 5px 0px;
+	color: #eee;
+	font-variant: small-caps;
+	display: inline;
+}
+
+.navbar-default .navbar-nav.navbar-right > li > a:hover {
+	position: inherit;
+	padding: 0px 5px 0px;
+	color: #333;
+}
+
+.navbar-left li {
+	margin-right: 10px;
+}
+
+.navbar-left li.active a, .navbar-left li a:hover {
+	border-bottom: 3px solid #000;
+	padding-bottom: 12px;
+}
+
+.navbar-left li a {
+	background-color: #efffef!important;
+	color: #000;
+}
+.navbar-left li a:hover {
 	background-color: #efffef!important;
 	color: #000;
 }
