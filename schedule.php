@@ -242,7 +242,7 @@
                 </div>
               </div>
               
-              <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12 R">
+              <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12 R3">
                 <div class="form-group">
                   <select name="roomm" class="form-control" id="roomm">
                     <option value="">-- Salle --</option>

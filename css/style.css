@@ -182,20 +182,9 @@ body {
 	width: 700px;
 	margin:auto;
 }
-#myModal .R1{
-	width:30%;
-	float:left;
-	}
-#myModal .R2{
-	display: inline-block;
-	width:30%;
-	margin-left:5%;	
-	}
-#myModal .R3{
-	display: inline-block;
-	width:30%;
-	float:right;
-	}
+#myModal .R1, #myModal .R2, #myModal .R3{
+	padding: 5px;
+}
 #myModal .block2{
 	padding-top : 15px;
 	width: 700px;

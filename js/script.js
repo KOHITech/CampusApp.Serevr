@@ -130,7 +130,7 @@ $(document).ready(function() {
         
         var vall = $(this).val();
         //
-        if (vall) {
+        if (vall == "TC") {
             chargement_loop("groupe", $groupe, 2)
             $groupe.parent().parent().toggleClass("hide");
         }
