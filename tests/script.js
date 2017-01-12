@@ -51,7 +51,7 @@ $(document).ready(function () {
 			$.ajax({
 				url: "../query.php",
 				data: data_object,
-				dataType: "json",
+				dataType: "text/plain",
 				method: query[1],
 				success: function (json) {
 					console.log(json);

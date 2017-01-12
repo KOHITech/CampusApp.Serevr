@@ -5,6 +5,14 @@ body {
 	font-family: Ubuntu;
 }
 
+.white {
+	color: white!important;
+}
+
+.white .prof {
+	text-align: center;
+}
+
 .hr {
 	border-top: 1px solid #aeaeae;
 	height: 1px;
@@ -151,13 +159,13 @@ body {
 	text-align: center;
 }
 .task{
-	background-color:#8bc24a;
+	background-color:#01A885;
 	border:1px white solid;
 	padding: 5px;
 	padding-bottom: 1px;
 	overflow: hidden;
 	margin-bottom: 7px;
-	color: white;
+	color: #373960;
 	font-size: 105%;
 	font-weight: bold;
 }

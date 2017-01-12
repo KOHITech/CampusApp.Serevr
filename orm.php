@@ -127,7 +127,8 @@
 			if ($wcolumns && $wvalues) {
 				$equ = "`%s` = %s";
 				$arr = [];
-				for ($i=0; $i < count($wcolumns); $i++) { 
+				for ($i=0; $i < count($wcolumns); $i++) {
+					
 					array_push($arr, sprintf($equ, $wcolumns[$i], $wvalues[$i]));
 				}
 				$where_clause = $where_clause . join(" AND ", $arr);
@@ -171,8 +172,9 @@
 		public function create($tablename, $row) {
 			$this->connect();
 
+			print_r($row->geta());
+
 			$sql = "INSERT INTO %s (%s) VALUES (%s)";
-			$sql = sprintf($sql, $tablename);
 
 			$columns = array_keys($row->geta());
 			for ($i=0; $i < count($columns); $i++) { 
@@ -180,10 +182,8 @@
 			}
 
 			$tmp_str = join(", ", $columns);
-			$sql = sprintf($sql, $tmp_str);
-
-			$tmp_str = join(", ", array_values($row->geta()));
-			$sql = sprintf($sql, $tmp_str);
+			$tmp2_str = join(", ", array_values($row->geta()));
+			$sql = sprintf($sql, $tablename, $tmp_str, $tmp2_str);
 
 			$retval = mysqli_query( $this->connection, $sql );
 
@@ -209,21 +209,22 @@
 			$this->close();
 		}
 
-		public function update($tablename, $row, $column, $value) {
+		public function update($tablename, $row, $wcolumn, $value) {
 			$this->connect();
 
 			$sql = "UPDATE %s SET %s WHERE `%s` = %s";
-			$sql = sprintf($sql, $tablename);
 
 			$tmp_str = [];
 			foreach (array_keys($row->geta()) as $column) {
-				array_push($tmp_str, "`$column` = " . $row[$column]);
+				array_push($tmp_str, "`$column` = " . $row->get($column));
 			}
 
+
 			$tmp_str = join(", ", $tmp_str);
-			$sql = sprintf($sql, $tmp_str, $column, $value);
+			$sql = sprintf($sql, $tablename, $tmp_str, $wcolumn, $value);
 
 			$retval = mysqli_query( $this->connection, $sql );
+			die('Could not update data: ' . mysqli_error($this->connection));
 
 			if(! $retval ) {
 				die('Could not update data: ' . mysqli_error($this->connection));

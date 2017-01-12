@@ -9,6 +9,26 @@ $(document).ready(function() {
     var $prof=$('#proff');
 
 
+    currentPos = 0;
+    $btn = $(".btnAdd");
+    $btn.on("click", function (e) {
+        var ee = $(e.target).parent().attr("id")
+        currentPos = ee[1] + "," + ee[2]; 
+        console.log(currentPos);
+    });
+
+    // for (var i = 1; i < 6; i++) {
+    //     for (var j = 1; j < 5; j++) {
+    //         $btn = $((("#i" + j) + i) + " .btnAdd");
+    //         console.log($btn);
+    //         $btn.on("click", function () {
+    //             currentPos = j + "," + i; 
+    //             console.log(currentPos);
+    //         });
+    //     };
+    // };
+
+
     var headers = {
         "year": "Année",
         "groupe": "Groupe",
@@ -18,6 +38,80 @@ $(document).ready(function() {
         "room":"Salle",
         "professor":"Encadrant"
     }
+
+    function get_code() {
+        a = ($annee.parent().parent().hasClass("hide") == ($annee.val() == "" || $annee.val() == null)) == true;
+        b = ($groupe.parent().parent().hasClass("hide") == ($groupe.val() == "" || $groupe.val() == null)) == true;
+        c = ($parcours.parent().parent().hasClass("hide") == ($parcours.val() == "" || $parcours.val() == null)) == true;
+        d = ($option.parent().parent().hasClass("hide") == ($option.val() == "" || $option.val() == null)) == true;
+
+        s = [];
+        s[0] = (a ? $annee.val() : "");
+        s[3] = (d ? $option.val() : "");
+        s[2] = (c ? $parcours.val() : "");
+        s[1] = (b ? $groupe.val() : "");
+
+        s = s.join("-");
+        for (var i = s.length - 1; i >= 0; i--) {
+            if (s[i] == "-") {
+                s = s.substring(0, i);
+            } else {
+                break;
+            }
+        };
+        return s
+    }
+
+    function fill_schedule(code){
+        console.log(code);
+        $.ajax({
+            url: 'query.php',
+            data: "query=select&tablename=task&columns=*&where=g_id;" + code, // on envoie $_GET['go']
+            method: "GET",
+            dataType: 'json', // on veut un retour JSON
+            success: function(json) {
+                $.each(json, function (index, value) {
+                    p = value.position;
+                    p = p.split(",");
+                    p = ("#i" + p[0]) + p[1];
+                    $p = $(p);
+                    $p.data("filled", "1");
+                    $p.removeClass("white");
+                    $p.children("p.subject").html(value.name);
+                    $p.children("p.prof").html(value.prof_id);
+                    $p.children("p.salle").html(value.salle_id);
+                });
+                for (var i = 1; i < 6; i++) {
+                    for (var j = 1; j < 5; j++) {
+                        $t = $(("#i" + j) + i);
+                        if ($t.data("filled") == "0") {
+                            $t.children("p.subject").html("->");
+                            $t.children("p.prof").html("libre");
+                            $t.children("p.salle").html("<-");
+                        };
+                    };
+                };
+            }
+        });
+    }
+
+    function get_g_id(){
+        console.log(get_code());
+        $.ajax({
+            url: 'query.php',
+            data: "query=select&tablename=groups&columns=*&where=code;" + get_code(), // on envoie $_GET['go']
+            method: "GET",
+            dataType: 'json', // on veut un retour JSON
+            success: function(json) {
+                a = 0
+                $.each(json, function (index, value) {
+                    a = value.groupe_id
+                });
+                fill_schedule(a);
+            }
+        });
+    }
+
     
     check_combo = function() {
         a = ($annee.parent().parent().hasClass("hide") == ($annee.val() == "" || $annee.val() == null)) &&
@@ -31,7 +125,89 @@ $(document).ready(function() {
         } else {
             $emploi.show();
         }
+        for (var i = 1; i < 6; i++) {
+            for (var j = 1; j < 5; j++) {
+                $t = $(("#i" + j) + i);
+                $t.data("filled", "0");
+                $t.addClass("white");
+                $t.children("p.subject").html("");
+                $t.children("p.prof").html("");
+                $t.children("p.salle").html("");
+            }
+        }
+        get_g_id();
     };
+
+    $("#add").on("click", function() {
+        console.log("salah");
+        data_object = {};
+        data_object['query'] = "create";
+        data_object['tablename'] = "task";
+        a = [];
+        a[0] = "name~" + $("#subjectt option:selected").text();
+        a[1] = "prof_id~" + $("#proff option:selected").text();
+        a[2] = "salle_id~" + $("#roomm option:selected").text();
+        a[3] = "position~" + currentPos;
+        data_object['row'] = a.join(";");
+
+        func = function (data) {
+            $.ajax({
+                url: 'query.php',
+                data: data, // on envoie $_GET['go']
+                method: "POST",
+                dataType: 'json', // on veut un retour JSON
+                success: function(json) {
+                    
+                }
+            });
+        };
+
+        flag = false;
+
+        tmpfunc = function() {
+            $.ajax({
+                url: 'query.php',
+                data: "query=select&tablename=groups&columns=*&where=code;" + get_code(), // on envoie $_GET['go']
+                method: "GET",
+                dataType: 'json', // on veut un retour JSON
+                success: function(json) {
+                    console.log(json);
+                    if(json == "") {
+                        data = {};
+                        data['query'] = "create";
+                        data['tablename'] = "groups";
+                        kk = [];
+                        kk[0] = "code~" + get_code();
+                        kk[1] = "users~1";
+                        kk[2] = "groupe_name~hj";
+                        console.log(kk);
+                        data["row"] = kk.join(";");
+                        func(data);
+                        flag = true;
+                        return;
+                    }
+                    $.each(json, function (index, value) {
+                        data_object['row'] += ";g_id~" + value.groupe_id;
+                        console.log(data_object);
+                        func(data_object);
+                    });
+                }
+            });
+        };
+
+
+
+        tmpfunc();
+        console.log(flag);
+        if(flag) {
+            tmpfunc();
+        }
+
+        get_g_id();
+
+    });
+
+
 
     // $annee.on("change", check_combo);
     $groupe.on("change", check_combo);

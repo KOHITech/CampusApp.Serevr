@@ -46,10 +46,9 @@
 		case 'create':
 			$tablename = $_POST["tablename"];
 			$row = $_POST["row"];
-
 			$row = explode(";", $row);
-			for ($i=0; $i < cout($row); $i++) { 
-				$row[i] = explode("~", $row[i]);
+			for ($i=0; $i < count($row); $i++) { 
+				$row[$i] = explode("~", $row[$i]);
 			}
 
 			$row_class = new Row();
@@ -86,8 +85,8 @@
 			}
 
 			$row = explode(";", $row);
-			for ($i=0; $i < cout($row); $i++) { 
-				$row[i] = explode("~", $row[i]);
+			for ($i=0; $i < count($row); $i++) { 
+				$row[$i] = explode("~", $row[$i]);
 			}
 
 			$row_class = new Row();

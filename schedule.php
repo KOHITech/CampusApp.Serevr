@@ -34,34 +34,34 @@
   </div><div class="block3" style="display:none;">
     <div class="col-xs 5ths col-sm-5ths col-md-5ths col-lg-5ths">
       <p class="day">Lundi</p>
-      <div class="task">
-        <p class="subject">Optimistation</p>
-        <p class="prof">Lafite</p>
-        <p class="salle">Ibn Sina</p>
+      <div class="task" data-filled="0" id="i11">
+        <p class="subject"></p>
+        <p class="prof"></p>
+        <p class="salle"></p>
         <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
           <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
         </button>
       </div>
-      <div class="task">
-        <p class="subject">Optimistation</p>
-        <p class="prof">Lafite</p>
-        <p class="salle">Ibn Sina</p>
+      <div class="task" data-filled="0" id="i21">
+        <p class="subject"></p>
+        <p class="prof"></p>
+        <p class="salle"></p>
         <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
           <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
         </button>
       </div>
-      <div class="task">
-        <p class="subject">Optimistation</p>
-        <p class="prof">Lafite</p>
-        <p class="salle">Ibn Sina</p>
+      <div class="task" data-filled="0" id="i31">
+        <p class="subject"></p>
+        <p class="prof"></p>
+        <p class="salle"></p>
         <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
           <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
         </button>
       </div>
-      <div class="task">
-        <p class="subject">Optimistation</p>
-        <p class="prof">Lafite</p>
-        <p class="salle">Ibn Sina</p>
+      <div class="task" data-filled="0" id="i41">
+        <p class="subject"></p>
+        <p class="prof"></p>
+        <p class="salle"></p>
         <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
           <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
         </button>
@@ -69,34 +69,34 @@
     </div>
     <div class="col-xs 5ths col-sm-5ths col-md-5ths col-lg-5ths">
       <p class="day">Mardi</p>
-      <div class="task">
-        <p class="subject">Optimistation</p>
-        <p class="prof">Lafite</p>
-        <p class="salle">Ibn Sina</p>
+      <div class="task" data-filled="0" id="i12">
+        <p class="subject"></p>
+        <p class="prof"></p>
+        <p class="salle"></p>
         <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
           <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
         </button>
       </div>
-      <div class="task">
-        <p class="subject">Optimistation</p>
-        <p class="prof">Lafite</p>
-        <p class="salle">Ibn Sina</p>
+      <div class="task" data-filled="0" id="i22">
+        <p class="subject"></p>
+        <p class="prof"></p>
+        <p class="salle"></p>
         <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
           <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
         </button>
       </div>
-      <div class="task">
-        <p class="subject">Optimistation</p>
-        <p class="prof">Lafite</p>
-        <p class="salle">Ibn Sina</p>
+      <div class="task" data-filled="0" id="i32">
+        <p class="subject"></p>
+        <p class="prof"></p>
+        <p class="salle"></p>
         <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
           <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
         </button>
       </div>
-      <div class="task">
-        <p class="subject">Optimistation</p>
-        <p class="prof">Lafite</p>
-        <p class="salle">Ibn Sina</p>
+      <div class="task" data-filled="0" id="i42">
+        <p class="subject"></p>
+        <p class="prof"></p>
+        <p class="salle"></p>
         <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
           <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
         </button>
@@ -104,34 +104,34 @@
     </div>
     <div class="col-xs 5ths col-sm-5ths col-md-5ths col-lg-5ths">
       <p class="day">Mercredi</p>
-      <div class="task">
-        <p class="subject">Optimistation</p>
-        <p class="prof">Lafite</p>
-        <p class="salle">Ibn Sina</p>
+      <div class="task" data-filled="0" id="i13">
+        <p class="subject"></p>
+        <p class="prof"></p>
+        <p class="salle"></p>
         <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
           <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
         </button>
       </div>
-      <div class="task">
-        <p class="subject">Optimistation</p>
-        <p class="prof">Lafite</p>
-        <p class="salle">Ibn Sina</p>
+      <div class="task" data-filled="0" id="i23">
+        <p class="subject"></p>
+        <p class="prof"></p>
+        <p class="salle"></p>
         <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
           <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
         </button>
       </div>
-      <div class="task">
-        <p class="subject">Optimistation</p>
-        <p class="prof">Lafite</p>
-        <p class="salle">Ibn Sina</p>
+      <div class="task" data-filled="0" id="i33">
+        <p class="subject"></p>
+        <p class="prof"></p>
+        <p class="salle"></p>
         <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
           <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
         </button>
       </div>
-      <div class="task">
-        <p class="subject">Optimistation</p>
-        <p class="prof">Lafite</p>
-        <p class="salle">Ibn Sina</p>
+      <div class="task" data-filled="0" id="i43">
+        <p class="subject"></p>
+        <p class="prof"></p>
+        <p class="salle"></p>
         <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
           <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
         </button>
@@ -139,34 +139,34 @@
     </div>
     <div class="col-xs 5ths col-sm-5ths col-md-5ths col-lg-5ths">
       <p class="day">Jeudi</p>
-      <div class="task">
-        <p class="subject">Optimistation</p>
-        <p class="prof">Lafite</p>
-        <p class="salle">Ibn Sina</p>
+      <div class="task" data-filled="0" id="i14">
+        <p class="subject"></p>
+        <p class="prof"></p>
+        <p class="salle"></p>
         <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
           <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
         </button>
       </div>
-      <div class="task">
-        <p class="subject">Optimistation</p>
-        <p class="prof">Lafite</p>
-        <p class="salle">Ibn Sina</p>
+      <div class="task" data-filled="0" id="i24">
+        <p class="subject"></p>
+        <p class="prof"></p>
+        <p class="salle"></p>
         <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
           <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
         </button>
       </div>
-      <div class="task">
-        <p class="subject">Optimistation</p>
-        <p class="prof">Lafite</p>
-        <p class="salle">Ibn Sina</p>
+      <div class="task" data-filled="0" id="i34">
+        <p class="subject"></p>
+        <p class="prof"></p>
+        <p class="salle"></p>
         <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
           <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
         </button>
       </div>
-      <div class="task">
-        <p class="subject">Optimistation</p>
-        <p class="prof">Lafite</p>
-        <p class="salle">Ibn Sina</p>
+      <div class="task" data-filled="0" id="i44">
+        <p class="subject"></p>
+        <p class="prof"></p>
+        <p class="salle"></p>
         <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
           <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
         </button>
@@ -174,34 +174,34 @@
     </div>
     <div class="col-xs 5ths col-sm-5ths col-md-5ths col-lg-5ths">
       <p class="day">Vendredi</p>
-      <div class="task">
-        <p class="subject">Optimistation</p>
-        <p class="prof">Lafite</p>
-        <p class="salle">Ibn Sina</p>
+      <div class="task" data-filled="0" id="i15">
+        <p class="subject"></p>
+        <p class="prof"></p>
+        <p class="salle"></p>
         <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
           <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
         </button>
       </div>
-      <div class="task">
-        <p class="subject">Optimistation</p>
-        <p class="prof">Lafite</p>
-        <p class="salle">Ibn Sina</p>
+      <div class="task" data-filled="0" id="i25">
+        <p class="subject"></p>
+        <p class="prof"></p>
+        <p class="salle"></p>
         <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
           <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
         </button>
       </div>
-      <div class="task">
-        <p class="subject">Optimistation</p>
-        <p class="prof">Lafite</p>
-        <p class="salle">Ibn Sina</p>
+      <div class="task" data-filled="0" id="i35">
+        <p class="subject"></p>
+        <p class="prof"></p>
+        <p class="salle"></p>
         <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
           <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
         </button>
       </div>
-      <div class="task">
-        <p class="subject">Optimistation</p>
-        <p class="prof">Lafite</p>
-        <p class="salle">Ibn Sina</p>
+      <div class="task" data-filled="0" id="i45">
+        <p class="subject"></p>
+        <p class="prof"></p>
+        <p class="salle"></p>
         <button type="button" class="btnAdd btn btn-default" aria-label="Left Align" data-toggle="modal" data-target="#myModal">
           <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
         </button>
@@ -319,7 +319,7 @@
         </div> -->
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Add</button>
+        <button id="add" type="button" class="btn btn-default" data-dismiss="modal">Add</button>
       </div>
     </div>
 

@@ -13,8 +13,8 @@
     ?>
 		<div id="navbar" class="navbar-collapse collapse">
 			<ul class="nav navbar-nav navbar-left">
-                <li <?php if($page=="schedule") echo 'class="active"'; ?>><a href="?page=schedule">Schedule</a></li>
 				<li <?php if($page=="dash") echo 'class="active"'; ?>><a href="?page=dash">Dashboard</a></li>
+                <li <?php if($page=="schedule") echo 'class="active"'; ?>><a href="?page=schedule">Schedule</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li>Bureau des élèves</li>
