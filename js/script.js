@@ -4,13 +4,19 @@ $(document).ready(function() {
     var $groupe = $('#groupe');
     var $parcours = $('#parcours');
     var $option = $('#option');
+    var $room=$('#roomm');
+    var $subject=$('#subjectt');
+    var $prof=$('#proff');
 
 
     var headers = {
         "year": "Année",
         "groupe": "Groupe",
         "parcours": "Parcours",
-        "branch": "Option"
+        "branch": "Option",
+        "subject":"Matière",
+        "room":"Salle",
+        "professor":"Encadrant"
     }
     
     check_combo = function() {
@@ -87,6 +93,12 @@ $(document).ready(function() {
         $groupe.append("<option value=''>-- " + headers["groupe"] + " --</option>");
         $option.empty();
         $option.append("<option value=''>-- " + headers["branch"] + " --</option>");
+        $subject.empty();
+        $subject.append("<option value=''>-- " + headers["subject"] + " --</option>");
+        $room.empty();
+        $room.append("<option value=''>-- " + headers["room"] + " --</option>");
+        $prof.empty();
+        $prof.append("<option value=''>-- " + headers["professor"] + " --</option>");
     }
 // fin definition des fonction
 //
@@ -106,6 +118,28 @@ $(document).ready(function() {
             chargement_loop("groupe", $groupe, "1");
 
             $groupe.parent().parent().toggleClass("hide");
+            chargement_loop("subject",$subject,"1");
+            chargement("room",$room);
+            // cette partie peut etre optimisée dans une fonction générique
+            //
+            $subject.on('change',function() {
+                var valsubj=$(this).val();
+                $.ajax({
+                    url: 'query.php',
+                    data: "query=select&tablename="+ "subject" +"&columns=*&where=short_name;"+valsubj, // on envoie $_GET['go']
+                    method: "GET",
+                    dataType: 'json', // on veut un retour JSON
+                    success: function(json) {
+                        $prof.empty();
+                        //$prof.append("<option value=''>-- " + "Encadrant "+ " --</option>");
+                        $.each(json, function(index,value) { // pour chaque noeud JSON
+                            // on ajoute l option dans la liste
+                            $prof.append('<option value="'+ value.short_name +'">'+ value.professor +'</option>');
+                        });
+                    }
+                });
+
+            })
         }
 
        if(val == '2A') {
@@ -113,6 +147,28 @@ $(document).ready(function() {
             chargement("parcours",$parcours)
 
             $parcours.parent().parent().toggleClass("hide");
+            chargement_loop("subject",$subject,"2");
+            chargement("room",$room);
+            // cette partie peut etre optimisée dans une fonction générique
+            //
+            $subject.on('change',function() {
+                var valsubj=$(this).val();
+                $.ajax({
+                    url: 'query.php',
+                    data: "query=select&tablename="+ "subject" +"&columns=*&where=short_name;"+valsubj, // on envoie $_GET['go']
+                    method: "GET",
+                    dataType: 'json', // on veut un retour JSON
+                    success: function(json) {
+                        $prof.empty();
+                        //$prof.append("<option value=''>-- " + "Encadrant "+ " --</option>");
+                        $.each(json, function(index,value) { // pour chaque noeud JSON
+                            // on ajoute l option dans la liste
+                            $prof.append('<option value="'+ value.short_name +'">'+ value.professor +'</option>');
+                        });
+                    }
+                });
+
+            })
         }
 
        if(val == '3A') {
