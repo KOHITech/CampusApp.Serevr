@@ -5,6 +5,63 @@ body {
 	font-family: Ubuntu;
 }
 
+.hr {
+	border-top: 1px solid #aeaeae;
+	height: 1px;
+	margin: 15px 0px;
+	width: 100%;
+}
+
+.events {
+	border-right: 1px solid #aeaeae;
+}
+
+.events h2.title {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-variant: small-caps;
+	letter-spacing: -1px;
+}
+
+.events .event {
+	clear: both;
+}
+
+.events .event:hover {
+	color: #aeaeae;
+	cursor: pointer;
+}
+
+.events .event h3.title {
+	padding-top: 10px;
+}
+
+.events .event p.date {
+	float: right;
+	color: #aeaeae!important;
+	font-size: smaller;
+	font-style: italic;	
+}
+
+.events .event p.club {
+	
+}
+
+.events .event .image {
+	height: 80px;
+	border-right: 1px solid #000;
+	padding-right: 7px;
+	display: inline-block;
+	float: left;
+	padding-top: 20px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+
+.events .event .image img {
+	height: 40px;
+}
+
 .hide {
 	display: none!important;
 }
